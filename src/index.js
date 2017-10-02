@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Projects from './containers/Projects';
+import Blog from './containers/Blog';
 import registerServiceWorker from './registerServiceWorker';
+import './theme/globalStyle';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Router>
+        <div>
+            <Route exact path="/" component={App} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/blog" component={Blog}/>
+        </div>
+    </Router>
+    , document.getElementById('root'));
 registerServiceWorker();
