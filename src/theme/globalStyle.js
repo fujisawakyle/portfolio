@@ -6,4 +6,7 @@ injectGlobal`
     body {
         font-family: "VT323", monospace;
     }
-`
+    .panelmid {
+        background: transparent;
+      }
+`;

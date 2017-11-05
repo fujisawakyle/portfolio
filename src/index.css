@@ -1,5 +1,19 @@
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panelmid {
+  background: transparent;
 }
