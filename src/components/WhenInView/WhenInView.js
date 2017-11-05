@@ -7,8 +7,6 @@ class WhenInView extends Component {
   };
 
   onEnterTop = ({ previousPosition, currentPosition }) => {
-    console.log('ENTERTOP previousPosition', previousPosition);
-    console.log('ENTERTOP currentPosition', currentPosition);
     if (previousPosition === Waypoint.below) {
       this.setState({
         isInView: true
@@ -17,8 +15,6 @@ class WhenInView extends Component {
   };
 
   onEnterBottom = ({ previousPosition, currentPosition }) => {
-    console.log('ENTERBOT previousPosition', previousPosition);
-    console.log('ENTERBOT currentPosition', currentPosition);
     if (previousPosition === Waypoint.above) {
       this.setState({
         isInView: true
@@ -27,8 +23,6 @@ class WhenInView extends Component {
   };
 
   onLeaveTop = ({ previousPosition, currentPosition }) => {
-    console.log('LEAVETOP previousPosition', previousPosition);
-    console.log('LEAVETOP currentPosition', currentPosition);
     if (currentPosition === Waypoint.below) {
       this.setState({
         isInView: false
@@ -37,8 +31,6 @@ class WhenInView extends Component {
   };
 
   onLeaveBottom = ({ previousPosition, currentPosition }) => {
-    console.log('LEAVEBOT previousPosition', previousPosition);
-    console.log('LEAVEBOT currentPosition', currentPosition);
     if (currentPosition === Waypoint.above) {
       this.setState({
         isInView: false

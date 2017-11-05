@@ -71,7 +71,10 @@ export const Panel = styled.div`
 `;
 
 export const Project1 = styled.div`
-  background: url('http://placehold.it/300x300');
+  background: url('../../assets/images/projects/WeatherApp.png');
   background-position: center;
   background-repeat: no-repeat;
+  &:after {
+    content: ' ';
+  }
 `;
