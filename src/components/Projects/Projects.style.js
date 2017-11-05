@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import img1 from '../../assets/images/projects/WeatherApp.png';
+import blob1 from '../../assets/graphics/BlueBlob.png';
 
 export const ProjectContainer = styled.div``;
 
@@ -39,12 +41,13 @@ export const RevealLeft = styled.p`
 `;
 
 export const Panels = styled.div`
-  min-height: 300px;
+  min-height: 450px;
   overflow: hidden;
   display: flex;
 `;
 export const Panel = styled.div`
   background: #6b0f9c;
+  z-index: 1;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
@@ -71,10 +74,22 @@ export const Panel = styled.div`
 `;
 
 export const Project1 = styled.div`
-  background: url('../../assets/images/projects/WeatherApp.png');
+  background: url(${img1});
+  background-size: auto 300px;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+
   &:after {
-    content: ' ';
+    content: url(${blob1});
+    z-index: -1;
+    background-size: auto 600px;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 4em;
+    width: 100%;
+    height; 100%;
   }
 `;
