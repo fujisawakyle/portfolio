@@ -49,8 +49,15 @@ export const RevealLeft = styled.p`
 `;
 
 export const Panels = styled.div`
-  min-height: 450px;
-  overflow: hidden;
+  min-height: 10em;
+  ${media.xs`
+min-height:13em;
+${media.sm`
+      min-height: 18em;
+`}
+      `} ${media.md`
+      min-height: 450px;
+      `} overflow: hidden;
   display: flex;
 `;
 export const Panel = styled.div`
@@ -84,54 +91,185 @@ export const Panel = styled.div`
 
 export const WeatherApp = styled.div`
   background: url(${WeatherAppImg});
-  background-size: auto 17em;
+  background-size: auto 7.3em;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 
+  transition: background-size 0.2s ease-in;
+
+  &:hover {
+    background-size: auto 7.5em;
+  }
+
   &:after {
-    content: url(${OrangeCloud});
+    background-image: url(${OrangeCloud});
+    background-size: 14.5em 8.5em;
+    background-repeat: no-repeat;
+    content: ' ';
     z-index: -1;
     position: absolute;
+    display: inline-block;
+    width: 14.5em;
+    height: 8.5em;
     top: 0;
-    left: 49%;
+    left: 51%;
     transform: translateX(-50%);
   }
+  ${media.xs`
+  background-size: auto 9.5em;
+  &:hover {
+    background-size: auto 9.7em;
+  }
+  &:after {
+    background-size: 20.3em 11.5em;
+    width: 20.3em;
+    height: 11.5em;
+  }
+  `} ${media.sm`
+    background-size: auto 13.5em;
+    &:hover {
+      background-size: auto 13.7em;
+    }
+    &:after {
+      background-size: 26.8em 16.5em;
+      width: 26.8em;
+      height: 16.5em;
+    }
+    
+  `} ${media.md`
+    background-size: auto 17em;
+    &:hover {
+      background-size: auto 17.2em;
+    }
+    &:after {
+      background-size: 36.8em 20.5em;
+      width: 36.8em;
+      height: 20.5em;
+    }
+  `};
 `;
 
 export const ResumeApp = styled.div`
   background: url(${ResumeAppImg});
-  background-size: auto 17em;
+  background-size: auto 7.3em;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 
+  transition: background-size 0.2s ease-in;
+
+  &:hover {
+    background-size: auto 7.5em;
+  }
+
   &:after {
-    content: url(${PurpleCloud});
+    background-image: url(${PurpleCloud});
+    background-size: 14.5em 8.5em;
+    background-repeat: no-repeat;
+    content: ' ';
     z-index: -1;
     position: absolute;
+    display: inline-block;
+    width: 14.5em;
+    height: 8.5em;
     top: 0;
     left: 51%;
     transform: translateX(-50%);
   }
+  ${media.xs`
+  background-size: auto 9.5em;
+  &:hover {
+    background-size: auto 9.7em;
   }
+  &:after {
+    background-size: 20.3em 11.5em;
+    width: 20.3em;
+    height: 11.5em;
+  }
+  `} ${media.sm`
+    background-size: auto 13.5em;
+    &:hover {
+      background-size: auto 13.7em;
+    }
+    &:after {
+      background-size: 26.8em 16.5em;
+      width: 26.8em;
+      height: 16.5em;
+    }
+    
+  `} ${media.md`
+    background-size: auto 17em;
+    &:hover {
+      background-size: auto 17.2em;
+    }
+    &:after {
+      background-size: 36.8em 20.5em;
+      width: 36.8em;
+      height: 20.5em;
+    }
+  `};
 `;
 
 export const CalculatorApp = styled.div`
   background: url(${CalculatorAppImg});
-  background-size: auto 17em;
+  background-size: auto 7.3em;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 
+  transition: background-size 0.2s ease-in;
+
+  &:hover {
+    background-size: auto 7.5em;
+  }
+
   &:after {
-    content: url(${GreenCloud});
+    background-image: url(${GreenCloud});
+    background-size: 14.5em 8.5em;
+    background-repeat: no-repeat;
+    content: ' ';
     z-index: -1;
     position: absolute;
+    display: inline-block;
+    width: 14.5em;
+    height: 8.5em;
     top: 0;
     left: 51%;
     transform: translateX(-50%);
   }
+  ${media.xs`
+  background-size: auto 9.5em;
+  &:hover {
+    background-size: auto 9.7em;
+  }
+  &:after {
+    background-size: 20.3em 11.5em;
+    width: 20.3em;
+    height: 11.5em;
+  }
+  `} ${media.sm`
+    background-size: auto 13.5em;
+    &:hover {
+      background-size: auto 13.7em;
+    }
+    &:after {
+      background-size: 26.8em 16.5em;
+      width: 26.8em;
+      height: 16.5em;
+    }
+    
+  `} ${media.md`
+    background-size: auto 17em;
+    &:hover {
+      background-size: auto 17.2em;
+    }
+    &:after {
+      background-size: 36.8em 20.5em;
+      width: 36.8em;
+      height: 20.5em;
+    }
+  `};
 `;
 
 export const MediflectionApp = styled.div`
@@ -149,14 +287,14 @@ export const MediflectionApp = styled.div`
 
   &:after {
     background-image: url(${RedCloud});
-    background-size: 14.5em 20.5em;
+    background-size: 14.5em 8.5em;
     background-repeat: no-repeat;
     content: ' ';
     z-index: -1;
     position: absolute;
     display: inline-block;
     width: 14.5em;
-    height: 20.5em;
+    height: 8.5em;
     top: 0;
     left: 49%;
     transform: translateX(-50%);
@@ -167,9 +305,9 @@ export const MediflectionApp = styled.div`
     background-size: auto 9.7em;
   }
   &:after {
-    background-size: 20.3em 20.5em;
+    background-size: 20.3em 11.5em;
     width: 20.3em;
-    height: 20.5em;
+    height: 11.5em;
   }
   `} ${media.sm`
     background-size: auto 13.5em;
@@ -177,9 +315,9 @@ export const MediflectionApp = styled.div`
       background-size: auto 13.7em;
     }
     &:after {
-      background-size: 26.8em 20.5em;
+      background-size: 26.8em 16.5em;
       width: 26.8em;
-      height: 20.5em;
+      height: 16.5em;
     }
     
   `} ${media.md`

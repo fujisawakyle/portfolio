@@ -70,11 +70,7 @@ export default class Projects extends Component {
               </WhenInView>
             </MediflectionApp>
           </a>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <ResumeApp>
             <WhenInView>
               {({ isInView }) => (
@@ -88,11 +84,7 @@ export default class Projects extends Component {
               )}
             </WhenInView>
           </ResumeApp>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <WeatherApp>
             <WhenInView>
               {({ isInView }) => (
@@ -106,11 +98,7 @@ export default class Projects extends Component {
               )}
             </WhenInView>
           </WeatherApp>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <CalculatorApp>
             <WhenInView>
               {({ isInView }) => (
