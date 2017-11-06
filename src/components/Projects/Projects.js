@@ -5,10 +5,15 @@ import {
   RevealLeft,
   Panels,
   Panel,
-  Project1
+  ResumeApp,
+  WeatherApp,
+  CalculatorApp,
+  MediflectionApp
 } from './Projects.style';
 import WhenInView from '../WhenInView/WhenInView';
 import classnames from 'classnames';
+import img1 from '../../assets/images/projects/WeatherApp.png';
+import RedCloud from '../../assets/graphics/RedCloud.svg';
 
 export default class Projects extends Component {
   state = {
@@ -49,51 +54,81 @@ export default class Projects extends Component {
             onClick={this.revealProject}
             src="http://placehold.it/300x300"
           />
-          <WhenInView>
-            {({ isInView }) => (
-              <Project1>
+          <a href="https://mediflection.herokuapp.com">
+            <MediflectionApp>
+              <WhenInView>
+                {({ isInView }) => (
+                  <Panels>
+                    {/* <img style={{ width: '50%' }} src={RedCloud} /> */}
+                    <Panel hide={isInView} />
+
+                    <Panel show={isInView} className={showclasses} />
+
+                    <Panel hide={isInView} />
+                  </Panels>
+                )}
+              </WhenInView>
+            </MediflectionApp>
+          </a>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <ResumeApp>
+            <WhenInView>
+              {({ isInView }) => (
                 <Panels>
-                  <Panel />
+                  <Panel hide={isInView} />
 
-                  <Panel hide={isInView} className={showclasses} />
+                  <Panel show={isInView} className={showclasses} />
 
-                  <Panel />
+                  <Panel hide={isInView} />
                 </Panels>
-              </Project1>
-            )}
-          </WhenInView>
+              )}
+            </WhenInView>
+          </ResumeApp>
           <br />
           <br />
           <br />
           <br />
           <br />
-          <WhenInView>
-            {({ isInView }) => (
-              <Panels>
-                <Panel />
+          <WeatherApp>
+            <WhenInView>
+              {({ isInView }) => (
+                <Panels>
+                  <Panel hide={isInView} />
 
-                <Panel hide={isInView} className={showclasses} />
+                  <Panel show={isInView} className={showclasses} />
 
-                <Panel />
-              </Panels>
-            )}
-          </WhenInView>
+                  <Panel hide={isInView} />
+                </Panels>
+              )}
+            </WhenInView>
+          </WeatherApp>
           <br />
           <br />
           <br />
           <br />
           <br />
-          <WhenInView>
-            {({ isInView }) => (
-              <Panels>
-                <Panel />
+          <CalculatorApp>
+            <WhenInView>
+              {({ isInView }) => (
+                <Panels>
+                  <Panel hide={isInView} />
 
-                <Panel hide={isInView} className={showclasses} />
+                  <Panel show={isInView} className={showclasses} />
 
-                <Panel />
-              </Panels>
-            )}
-          </WhenInView>
+                  <Panel hide={isInView} />
+                </Panels>
+              )}
+            </WhenInView>
+          </CalculatorApp>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <WhenInView>
             {({ isInView }) => (
               <RevealLeft hide={!isInView}>
