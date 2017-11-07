@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Container from '../../theme/grid/Container';
 
-const Image = styled.img`
-  width: 100%;
-  max-width: 40em;
-`;
+import { Name, HeroImage, HeroText } from './Home.style';
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <Container>
-        <h1>Hello there! I'm Kyle</h1>
-        <Image
+        <HeroImage
           src={require('../../assets/images/kyle.jpg')}
           alt="Kyle hero image"
         />
-        <p>Pariatur laborum nostrud pariatur nulla irure aute velit.</p>
+        <HeroText>
+          Hello there! <br /> I'm <Name>Kyle</Name>
+        </HeroText>
+        <p>Here's the story of how I became a developer...</p>
       </Container>
     );
   }

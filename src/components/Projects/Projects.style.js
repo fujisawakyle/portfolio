@@ -113,7 +113,7 @@ export const WeatherApp = styled.div`
     width: 14.5em;
     height: 8.5em;
     top: 0;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%);
   }
   ${media.xs`
@@ -174,7 +174,7 @@ export const ResumeApp = styled.div`
     width: 14.5em;
     height: 8.5em;
     top: 0;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%);
   }
   ${media.xs`
@@ -235,7 +235,7 @@ export const CalculatorApp = styled.div`
     width: 14.5em;
     height: 8.5em;
     top: 0;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%);
   }
   ${media.xs`
@@ -296,7 +296,7 @@ export const MediflectionApp = styled.div`
     width: 14.5em;
     height: 8.5em;
     top: 0;
-    left: 49%;
+    left: 50%;
     transform: translateX(-50%);
   }
   ${media.xs`
