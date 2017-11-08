@@ -15,7 +15,12 @@ export default class Home extends Component {
         <HeroText>
           Hello there! <br /> I'm <Name>Kyle</Name>
         </HeroText>
-        <p>Here's the story of how I became a developer...</p>
+        <p>
+          I'm a front-end developer based in Anaheim, CA. I love building
+          mobile-first websites and apps from scratch. I'm currently focused on
+          increasing my skills in React.js.{' '}
+        </p>
+        <p>My skills include git, GitHub, BEM, CSS(Sass), ES6, API's</p>
       </Container>
     );
   }
