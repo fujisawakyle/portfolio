@@ -1,27 +1,40 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Container from '../../theme/grid/Container';
+import downArrow from '../../assets/graphics/arrow-down.svg';
 
-import { Name, HeroImage, HeroText } from './Home.style';
+import {
+  DownArrow,
+  Header,
+  Hero,
+  Name,
+  HeroImage,
+  HeroText,
+  Wave
+} from './Home.style';
 
 export default class Home extends Component {
   render() {
     return (
-      <Container>
-        <HeroImage
+      <div>
+        <Hero>
+          <Wave />
+          <DownArrow src={downArrow} width="1em" alt="Google" />
+        </Hero>
+        <HeroText>Hello there!</HeroText>
+        {/* <HeroImage
           src={require('../../assets/images/kyle.jpg')}
           alt="Kyle hero image"
-        />
-        <HeroText>
-          Hello there! <br /> I'm <Name>Kyle</Name>
-        </HeroText>
+          />
+          <br /> I'm <Name>Kyle</Name>
+           */}
+
         <p>
           I'm a front-end developer based in Anaheim, CA. I love building
           mobile-first websites and apps from scratch. I'm currently focused on
           increasing my skills in React.js.{' '}
         </p>
         <p>My skills include git, GitHub, BEM, CSS(Sass), ES6, API's</p>
-      </Container>
+      </div>
     );
   }
 }
