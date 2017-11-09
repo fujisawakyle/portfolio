@@ -15,6 +15,19 @@ import classnames from 'classnames';
 import img1 from '../../assets/images/projects/WeatherApp.png';
 import RedCloud from '../../assets/graphics/RedCloud.svg';
 
+import downArrow from '../../assets/graphics/arrow-down.svg';
+
+import {
+  DownArrow,
+  Header,
+  Hero,
+  Name,
+  HeroImage,
+  HeroText,
+  WelcomeText,
+  Wave
+} from '../Home/Home.style';
+
 export default class Projects extends Component {
   state = {
     open: false
@@ -28,32 +41,13 @@ export default class Projects extends Component {
     });
     return (
       <div>
+        <Hero>
+          <Wave />
+          <DownArrow src={downArrow} width="1em" alt="Google" />
+          <WelcomeText>Hello there!</WelcomeText>
+        </Hero>
         <h1>Projects</h1>
         <ProjectContainer>
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
-          <ProjectImage
-            onClick={this.revealProject}
-            src="http://placehold.it/300x300"
-          />
           <a href="https://mediflection.herokuapp.com">
             <MediflectionApp>
               <WhenInView>

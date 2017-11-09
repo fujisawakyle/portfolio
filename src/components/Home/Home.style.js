@@ -8,10 +8,21 @@ export const HeroImage = styled.img`
 
 export const HeroText = styled.h1`
   position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+  font-size: 7em;
+  font-family: 'Chewy', cursive;
+`;
+
+export const WelcomeText = styled.h1`
+  position: absolute;
   top: 10%;
   left: 20%;
-  z-index: 1;
-  color: white;
+  font-family: 'Pompiere', cursive;
+  font-weight: 100;
+  font-size: 2.6em;
 `;
 
 export const Name = styled.span`
@@ -41,9 +52,10 @@ export const Wave = styled.div`
   }
 `;
 
-export const Header = styled.div`background: #1983fb;`;
+export const Header = styled.div``;
 
 export const Hero = styled.div`
+  color: white;
   position: relative;
   height: 100vh;
   background: linear-gradient(

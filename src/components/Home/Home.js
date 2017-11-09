@@ -9,6 +9,7 @@ import {
   Name,
   HeroImage,
   HeroText,
+  WelcomeText,
   Wave
 } from './Home.style';
 
@@ -19,8 +20,8 @@ export default class Home extends Component {
         <Hero>
           <Wave />
           <DownArrow src={downArrow} width="1em" alt="Google" />
+          <WelcomeText>Hello there!</WelcomeText>
         </Hero>
-        <HeroText>Hello there!</HeroText>
         {/* <HeroImage
           src={require('../../assets/images/kyle.jpg')}
           alt="Kyle hero image"

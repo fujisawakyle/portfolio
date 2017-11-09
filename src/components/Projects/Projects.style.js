@@ -61,9 +61,8 @@ ${media.sm`
   display: flex;
 `;
 export const Panel = styled.div`
-  background: #fff;
+  background: #1983fb;
   z-index: 1;
-  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
   align-items: center;
