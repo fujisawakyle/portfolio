@@ -16,6 +16,8 @@ import img1 from '../../assets/images/projects/WeatherApp.png';
 import RedCloud from '../../assets/graphics/RedCloud.svg';
 
 import downArrow from '../../assets/graphics/arrow-down.svg';
+import rightArrow from '../../assets/graphics/arrow-right.svg';
+import Boat3 from '../../assets/graphics/Boat.svg';
 
 import {
   DownArrow,
@@ -25,7 +27,9 @@ import {
   HeroImage,
   HeroText,
   WelcomeText,
-  Wave
+  Wave,
+  Boat,
+  Boat2
 } from '../Home/Home.style';
 
 export default class Projects extends Component {
@@ -43,7 +47,9 @@ export default class Projects extends Component {
       <div>
         <Hero>
           <Wave />
-          <DownArrow src={downArrow} width="1em" alt="Google" />
+          <Boat src={Boat3} width="6em" alt="Boat" />
+          <Boat2 src={Boat3} width="6em" alt="Boat" />
+          <DownArrow src={downArrow} width="1em" alt="downarrow" />
           <WelcomeText>Hello there!</WelcomeText>
         </Hero>
         <h1>Projects</h1>

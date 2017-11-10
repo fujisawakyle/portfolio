@@ -32,7 +32,7 @@ export const Name = styled.span`
 
 export const Wave = styled.div`
   background: linear-gradient(to bottom, #22c5ff, #48f4e5);
-  height: 65vh;
+  height: calc(12em + 27vh);
   position: relative;
 
   &:before {
@@ -67,21 +67,65 @@ export const Hero = styled.div`
   //background: #1983fb;
 `;
 
+export const Boat = styled.img`
+  width: calc(9.1em + 1.2vw);
+  position: absolute;
+  animation: sail-right 15s infinite linear, wave 2s infinite ease;
+`;
+
+export const Boat2 = styled.img`
+  width: calc(9.1em + 1.2vw);
+  position: absolute;
+  transform: rotateY(-180deg);
+  animation: sail-left 15s infinite linear, wave 2s infinite ease;
+`;
+
 export const DownArrow = styled.img`
   width: calc(1.1em + 1.2vw);
   position: absolute;
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-  animation: mymove 1s;
-  animation-iteration-count: 10;
+  animation: arrowdown 0.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
 
-  @keyframes mymove {
+  @keyframes arrowdown {
     from {
-      bottom: 2em;
+      bottom: 4em;
     }
     to {
-      bottom: 1em;
+      bottom: 3em;
+    }
+  }
+
+  @keyframes sail-right {
+    0% {
+      left: -40%;
+    }
+    100% {
+      left: 250%;
+    }
+  }
+
+  @keyframes sail-left {
+    0% {
+      left: 250%;
+    }
+    100% {
+      left: -40%;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      top: 42.5vh;
+    }
+    50% {
+      top: 40vh;
+    }
+    100% {
+      top: 42.5vh;
     }
   }
 `;
