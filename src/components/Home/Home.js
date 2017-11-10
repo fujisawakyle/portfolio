@@ -10,18 +10,27 @@ import {
   HeroImage,
   HeroText,
   WelcomeText,
-  Wave
+  Wave,
+  Boat,
+  HomeContainer,
+  Bubble0
 } from './Home.style';
+
+import BoatGraphic from '../../assets/graphics/Boat.svg';
 
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <HomeContainer>
         <Hero>
           <Wave />
-          <DownArrow src={downArrow} width="1em" alt="Google" />
+          <Boat src={BoatGraphic} alt="boat sailing to right" />
+          {/* <Boat2 src={BoatGraphic} width="6em" alt="Boat" /> */}
+          <DownArrow src={downArrow} alt="down arrow" />
           <WelcomeText>Hello there!</WelcomeText>
+          <Bubble0 src={'http://placehold.it/100x100'} />
         </Hero>
+
         {/* <HeroImage
           src={require('../../assets/images/kyle.jpg')}
           alt="Kyle hero image"
@@ -35,7 +44,7 @@ export default class Home extends Component {
           increasing my skills in React.js.{' '}
         </p>
         <p>My skills include git, GitHub, BEM, CSS(Sass), ES6, API's</p>
-      </div>
+      </HomeContainer>
     );
   }
 }

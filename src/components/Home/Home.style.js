@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const HomeContainer = styled.div`background: #1983fb;`;
+
 export const HeroImage = styled.img`
   width: 100%;
   max-width: 40em;
@@ -50,72 +52,6 @@ export const Wave = styled.div`
       #1983fb 13px
     );
   }
-`;
-
-export const Header = styled.div``;
-
-export const Hero = styled.div`
-  color: white;
-  position: relative;
-  height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    #1983fb 82%,
-    #5092dc 109%,
-    #ffffff 341%
-  );
-  //background: #1983fb;
-`;
-
-export const Boat = styled.img`
-  width: calc(9.1em + 1.2vw);
-  position: absolute;
-  animation: sail-right 15s infinite linear, wave 2s infinite ease;
-`;
-
-export const Boat2 = styled.img`
-  width: calc(9.1em + 1.2vw);
-  position: absolute;
-  transform: rotateY(-180deg);
-  animation: sail-left 15s infinite linear, wave 2s infinite ease;
-`;
-
-export const DownArrow = styled.img`
-  width: calc(1.1em + 1.2vw);
-  position: absolute;
-  bottom: 1em;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: arrowdown 0.7s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-
-  @keyframes arrowdown {
-    from {
-      bottom: 4em;
-    }
-    to {
-      bottom: 3em;
-    }
-  }
-
-  @keyframes sail-right {
-    0% {
-      left: -40%;
-    }
-    100% {
-      left: 250%;
-    }
-  }
-
-  @keyframes sail-left {
-    0% {
-      left: 250%;
-    }
-    100% {
-      left: -40%;
-    }
-  }
 
   @keyframes wave {
     0% {
@@ -126,6 +62,89 @@ export const DownArrow = styled.img`
     }
     100% {
       top: 42.5vh;
+    }
+  }
+`;
+
+export const Header = styled.div``;
+
+export const Hero = styled.div`
+  border: 3px solid red;
+  color: white;
+  position: relative;
+  height: 130vh;
+  background: linear-gradient(
+    to bottom,
+    #1983fb 82%,
+    #5092dc 109%,
+    #ffffff 341%
+  );
+  background: #1983fb;
+`;
+
+export const Boat = styled.img`
+  width: calc(13.1em + 1.2vw);
+  position: absolute;
+  animation: sail-right 10s infinite linear, wave 2s infinite ease;
+
+  @keyframes sail-right {
+    0% {
+      left: -60%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+
+  // @keyframes sail-left {
+  //   0% {
+  //     left: 250%;
+  //   }
+  //   100% {
+  //     left: -40%;
+  //   }
+  // }
+`;
+
+// export const Boat2 = styled.img`
+//   width: calc(9.1em + 1.2vw);
+//   position: absolute;
+//   transform: rotateY(-180deg);
+//   animation: sail-left 15s infinite linear, wave 2s infinite ease;
+// `;
+
+export const DownArrow = styled.img`
+  width: calc(1.1em + 1.2vw);
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: arrowdown 0.7s infinite ease;
+
+  @keyframes arrowdown {
+    from {
+      bottom: 42vh;
+    }
+    to {
+      bottom: 40vh;
+    }
+  }
+`;
+
+export const Bubble0 = styled.img`
+  width: 5em;
+  position: absolute;
+
+  animation: rise0 3s infinite;
+
+  @keyframes rise0 {
+    0% {
+      bottom: 0;
+      left: 0;
+    }
+    100% {
+      bottom: 40vh;
+      left: 50%;
     }
   }
 `;

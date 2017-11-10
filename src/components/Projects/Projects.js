@@ -28,8 +28,7 @@ import {
   HeroText,
   WelcomeText,
   Wave,
-  Boat,
-  Boat2
+  Boat
 } from '../Home/Home.style';
 
 export default class Projects extends Component {
@@ -48,7 +47,7 @@ export default class Projects extends Component {
         <Hero>
           <Wave />
           <Boat src={Boat3} width="6em" alt="Boat" />
-          <Boat2 src={Boat3} width="6em" alt="Boat" />
+          {/* <Boat2 src={Boat3} width="6em" alt="Boat" /> */}
           <DownArrow src={downArrow} width="1em" alt="downarrow" />
           <WelcomeText>Hello there!</WelcomeText>
         </Hero>
