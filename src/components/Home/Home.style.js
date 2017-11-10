@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const HomeContainer = styled.div`background: #1983fb;`;
+export const HomeContainer = styled.div`
+  color: white;
+  position: relative;
+  background: #1983fb;
+`;
 
 export const HeroImage = styled.img`
   width: 100%;
@@ -32,6 +36,32 @@ export const Name = styled.span`
   color: #0557b7;
 `;
 
+export const Sun = styled.img`
+  width: 4em;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  animation: spin 80s infinite linear;
+`;
+
+export const Rays = styled.img`
+  position: absolute;
+  top: 25px;
+  right: 23px;
+  z-index: 1;
+  animation: spin 80s infinite linear;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
 export const Wave = styled.div`
   background: linear-gradient(to bottom, #22c5ff, #48f4e5);
   height: calc(12em + 27vh);
@@ -52,27 +82,14 @@ export const Wave = styled.div`
       #1983fb 13px
     );
   }
-
-  @keyframes wave {
-    0% {
-      top: 42.5vh;
-    }
-    50% {
-      top: 40vh;
-    }
-    100% {
-      top: 42.5vh;
-    }
-  }
 `;
 
 export const Header = styled.div``;
 
 export const Hero = styled.div`
-  border: 3px solid red;
   color: white;
   position: relative;
-  height: 130vh;
+  height: 100vh;
   background: linear-gradient(
     to bottom,
     #1983fb 82%,
@@ -83,6 +100,7 @@ export const Hero = styled.div`
 `;
 
 export const Boat = styled.img`
+  z-index: 1;
   width: calc(13.1em + 1.2vw);
   position: absolute;
   animation: sail-right 10s infinite linear, wave 2s infinite ease;
@@ -104,6 +122,18 @@ export const Boat = styled.img`
   //     left: -40%;
   //   }
   // }
+
+  @keyframes wave {
+    0% {
+      top: 42.5vh;
+    }
+    50% {
+      top: 40vh;
+    }
+    100% {
+      top: 42.5vh;
+    }
+  }
 `;
 
 // export const Boat2 = styled.img`
@@ -123,28 +153,138 @@ export const DownArrow = styled.img`
 
   @keyframes arrowdown {
     from {
-      bottom: 42vh;
+      bottom: 18vh;
     }
     to {
-      bottom: 40vh;
+      bottom: 16vh;
     }
   }
 `;
 
-export const Bubble0 = styled.img`
-  width: 5em;
-  position: absolute;
+export const Intro = styled.div`text-align: center;`;
 
-  animation: rise0 3s infinite;
+export const Bubble0 = styled.img`
+  width: 0.7em;
+  position: absolute;
+  animation: rise0 4s infinite ease-in;
 
   @keyframes rise0 {
     0% {
-      bottom: 0;
-      left: 0;
+      top: 95%;
+      left: 15%;
+    }
+    25% {
+      left: 18%;
+    }
+    70% {
+      left: 17%;
     }
     100% {
-      bottom: 40vh;
-      left: 50%;
+      top: calc(11em + 27vh);
+      left: 16%;
     }
   }
+`;
+
+export const Bubble1 = styled.img`
+  width: 1em;
+  position: absolute;
+
+  animation: rise1 3s infinite ease-in;
+  @keyframes rise1 {
+    0% {
+      top: 94%;
+      left: 22%;
+    }
+    75% {
+      left: 18%;
+    }
+    100% {
+      top: calc(11em + 27vh);
+      left: 19%;
+    }
+  }
+`;
+export const Bubble2 = styled.img`
+  width: 1em;
+  position: absolute;
+
+  animation: rise2 5s infinite ease-in;
+  @keyframes rise2 {
+    0% {
+      top: 95%;
+      left: 29%;
+    }
+    50% {
+      left: 35%;
+    }
+
+    100% {
+      top: calc(11em + 27vh);
+      left: 55%;
+    }
+  }
+`;
+export const Bubble3 = styled.img`
+  width: 1em;
+  position: absolute;
+
+  animation: rise3 4s infinite ease-in;
+  @keyframes rise3 {
+    0% {
+      top: 95%;
+      left: 40%;
+    }
+    75% {
+      left: 43%;
+    }
+    100% {
+      top: calc(11em + 27vh);
+      left: 41%;
+    }
+  }
+`;
+export const Bubble4 = styled.img`
+  width: 0.7em;
+  position: absolute;
+
+  animation: rise4 8s infinite ease-in;
+  @keyframes rise4 {
+    0% {
+      top: 95%;
+      left: 65%;
+    }
+
+    75% {
+    }
+    100% {
+      top: calc(11em + 27vh);
+      left: 48%;
+    }
+  }
+`;
+
+export const Bubble5 = styled.img`
+  width: 1em;
+  position: absolute;
+
+  animation: rise5 5s infinite ease-in;
+  @keyframes rise5 {
+    0% {
+      top: 94%;
+      left: 98%;
+    }
+    65% {
+      left: 82%;
+    }
+    100% {
+      top: calc(11em + 27vh);
+      left: 80%;
+    }
+  }
+`;
+
+export const Fissure = styled.img`
+  position: absolute:
+  bottom: 0;
 `;
