@@ -64,7 +64,14 @@ export default class Home extends Component {
            */}
 
         <Intro>
-          <Nav />
+          <Nav>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Project</li>
+              <li>Contact</li>
+            </ul>
+          </Nav>
           <ContentContainer>
             <IntroP>
               I'm a front-end developer based in Orange County, CA. I love

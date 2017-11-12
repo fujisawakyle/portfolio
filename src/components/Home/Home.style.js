@@ -90,13 +90,13 @@ export const Nav = styled.div`
   top: 0;
   left: 0;
   width: 20%;
-  background: white;
   z-index: 1;
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 80%;
 `;
 
 export const Hero = styled.div`
@@ -195,7 +195,7 @@ export const Intro = styled.div`
   justify-content: center;
 `;
 
-export const IntroP = styled.p`width: 80%;`;
+export const IntroP = styled.p``;
 
 export const Bubble0 = styled.img`
   width: 0.7em;
