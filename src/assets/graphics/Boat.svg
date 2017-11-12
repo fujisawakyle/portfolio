@@ -115,9 +115,9 @@
             <ellipse id="Oval-7" stroke="#FFFFFF" fill="#FFFFFF" cx="365" cy="270.5" rx="2" ry="1.5"></ellipse>
             <path d="M260.5,125 C261.328427,125 262,124.328427 262,123.5 C262,122.671573 261.328427,122 260.5,122 C259.671573,122 259,122.671573 259,123.5 C259,124.328427 259.671573,125 260.5,125 Z" id="Oval-2" fill="#FFFFFF" transform="translate(260.500000, 123.500000) rotate(-11.000000) translate(-260.500000, -123.500000) "></path>
             <path d="M360,139.212903 C409.153343,139.212903 449,109.392179 449,72.6064516 C449,35.8207241 409.153343,6 360,6 C310.846657,6 271,35.8207241 271,72.6064516 C271,86.675885 276.828897,99.7264552 286.778013,110.479409 C290.099073,114.068794 277.159782,136.183107 281.335484,139.212903 C285.614487,142.317653 307.028295,126.322681 312.069625,128.738688 C325.904484,135.368908 342.35241,139.212903 360,139.212903 Z" id="Oval-9" fill="#FFFFFF"></path>
-            <text id="I’m-Kyle!" font-family="LucidaGrande, Lucida Grande" font-size="48" font-weight="normal" fill="#D60D0D">
-                <tspan x="311" y="59">I’m</tspan>
-                <tspan x="311" y="115">Kyle!</tspan>
+            <text id="I’m-Kyle!" font-family="ToppanBunkyuMidashiMinchoStdN-ExtraBold, Toppan Bunkyu Midashi Mincho" font-size="48" font-weight="600" fill="#000000">
+                <tspan x="321.524" y="57">I’m</tspan>
+                <tspan x="301.028" y="105">Kyle!</tspan>
             </text>
         </g>
     </g>

@@ -64,7 +64,7 @@ export const Rays = styled.img`
 
 export const Wave = styled.div`
   background: linear-gradient(to bottom, #22c5ff, #48f4e5);
-  height: calc(12em + 27vh);
+  height: calc(7em + 27vh);
   position: relative;
 
   &:before {
@@ -84,7 +84,20 @@ export const Wave = styled.div`
   }
 `;
 
-export const Header = styled.div``;
+export const Nav = styled.div`
+  position: sticky;
+  height: 5em;
+  top: 0;
+  left: 0;
+  width: 20%;
+  background: white;
+  z-index: 1;
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const Hero = styled.div`
   color: white;
@@ -101,37 +114,51 @@ export const Hero = styled.div`
 
 export const Boat = styled.img`
   z-index: 1;
-  width: calc(13.1em + 1.2vw);
+  width: calc(3em + 35vw);
+  max-width: 23em;
   position: absolute;
-  animation: sail-right 10s infinite linear, wave 2s infinite ease;
+  animation: sail-right 3s forwards linear, wave 2s infinite ease;
 
   @keyframes sail-right {
     0% {
       left: -60%;
     }
     100% {
-      left: 120%;
+      left: 60%;
     }
   }
 
-  // @keyframes sail-left {
-  //   0% {
-  //     left: 250%;
-  //   }
-  //   100% {
-  //     left: -40%;
-  //   }
-  // }
-
   @keyframes wave {
     0% {
-      top: 42.5vh;
+      top: calc(3em + 27vh);
     }
     50% {
-      top: 40vh;
+      top: calc(3em + 30vh);
     }
     100% {
-      top: 42.5vh;
+      top: calc(3em + 27vh);
+    }
+  }
+`;
+
+export const IntroSlideIn = styled.div`
+  position: absolute;
+  left: 100%;
+  top: 65vh;
+  text-align: center;
+  width: 90%;
+  max-width: 40em;
+  animation: slide-in 0.5s 3.2s forwards ease;
+
+  @keyframes slide-in {
+    0% {
+      left: 100%;
+    }
+    80% {
+      left: -3%;
+    }
+    100% {
+      left: 5%;
     }
   }
 `;
@@ -153,15 +180,22 @@ export const DownArrow = styled.img`
 
   @keyframes arrowdown {
     from {
-      bottom: 18vh;
+      bottom: 6vh;
     }
     to {
-      bottom: 16vh;
+      bottom: 4vh;
     }
   }
 `;
 
-export const Intro = styled.div`text-align: center;`;
+export const Intro = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const IntroP = styled.p`width: 80%;`;
 
 export const Bubble0 = styled.img`
   width: 0.7em;
@@ -287,4 +321,10 @@ export const Bubble5 = styled.img`
 export const Fissure = styled.img`
   position: absolute:
   bottom: 0;
+  width:100%;
+`;
+
+export const Footer = styled.div`
+  height: 5em;
+  background: #97693f;
 `;
