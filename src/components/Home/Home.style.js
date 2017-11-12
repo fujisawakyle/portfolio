@@ -91,6 +91,9 @@ export const Nav = styled.div`
   left: 0;
   width: 20%;
   z-index: 1;
+  li {
+    list-style: none;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -124,19 +127,19 @@ export const Boat = styled.img`
       left: -60%;
     }
     100% {
-      left: 60%;
+      left: 50%;
     }
   }
 
   @keyframes wave {
     0% {
-      top: calc(3em + 27vh);
+      top: calc(1em + 17vh);
     }
     50% {
-      top: calc(3em + 30vh);
+      top: calc(1em + 20vh);
     }
     100% {
-      top: calc(3em + 27vh);
+      top: calc(1em + 17vh);
     }
   }
 `;
