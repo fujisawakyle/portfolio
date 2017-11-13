@@ -66,18 +66,17 @@ export default class Home extends Component {
         <Intro>
           <Nav>
             <ul>
-              <li>Home</li>
+              <li>
+                <a href="/projects">Home</a>
+              </li>
               <li>About</li>
-              <li>Project</li>
+              <li>
+                <a href="/projects">Project</a>
+              </li>
               <li>Contact</li>
             </ul>
           </Nav>
           <ContentContainer>
-            <IntroP>
-              I'm a front-end developer based in Orange County, CA. I love
-              building mobile-first websites and apps from scratch. I'm
-              currently focused on increasing my skills in React.js.
-            </IntroP>
             <IntroP>
               My skills include git, GitHub, BEM, CSS(Sass), ES6, API's
             </IntroP>

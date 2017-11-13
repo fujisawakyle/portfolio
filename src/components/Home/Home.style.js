@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../theme/media';
 
 export const HomeContainer = styled.div`
   color: white;
@@ -64,7 +65,7 @@ export const Rays = styled.img`
 
 export const Wave = styled.div`
   background: linear-gradient(to bottom, #22c5ff, #48f4e5);
-  height: calc(7em + 27vh);
+  height: 40vh;
   position: relative;
 
   &:before {
@@ -117,8 +118,8 @@ export const Hero = styled.div`
 
 export const Boat = styled.img`
   z-index: 1;
-  width: calc(3em + 35vw);
-  max-width: 23em;
+  width: calc(2em + 39vw - 10vw);
+  max-width: 16em;
   position: absolute;
   animation: sail-right 3s forwards linear, wave 2s infinite ease;
 
@@ -127,19 +128,19 @@ export const Boat = styled.img`
       left: -60%;
     }
     100% {
-      left: 50%;
+      left: 40vw;
     }
   }
 
   @keyframes wave {
     0% {
-      top: calc(1em + 17vh);
+      top: calc(37vh - 10vw);
     }
     50% {
-      top: calc(1em + 20vh);
+      top: calc(39vh - 10vw);
     }
     100% {
-      top: calc(1em + 17vh);
+      top: calc(37vh - 10vw);
     }
   }
 `;
@@ -147,7 +148,8 @@ export const Boat = styled.img`
 export const IntroSlideIn = styled.div`
   position: absolute;
   left: 100%;
-  top: 65vh;
+  top: 53vh;
+  font-size: calc(0.6em + 2.7vw);
   text-align: center;
   width: 90%;
   max-width: 40em;
@@ -158,10 +160,11 @@ export const IntroSlideIn = styled.div`
       left: 100%;
     }
     80% {
-      left: -3%;
+      left: 40%;
     }
     100% {
-      left: 5%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 `;
@@ -203,7 +206,7 @@ export const IntroP = styled.p``;
 export const Bubble0 = styled.img`
   width: 0.7em;
   position: absolute;
-  animation: rise0 4s infinite ease-in;
+  animation: rise0 5s infinite ease-in;
 
   @keyframes rise0 {
     0% {
@@ -217,7 +220,7 @@ export const Bubble0 = styled.img`
       left: 17%;
     }
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 16%;
     }
   }
@@ -227,7 +230,7 @@ export const Bubble1 = styled.img`
   width: 1em;
   position: absolute;
 
-  animation: rise1 3s infinite ease-in;
+  animation: rise1 4s infinite ease-in;
   @keyframes rise1 {
     0% {
       top: 94%;
@@ -237,7 +240,7 @@ export const Bubble1 = styled.img`
       left: 18%;
     }
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 19%;
     }
   }
@@ -246,7 +249,7 @@ export const Bubble2 = styled.img`
   width: 1em;
   position: absolute;
 
-  animation: rise2 5s infinite ease-in;
+  animation: rise2 6s infinite ease-in;
   @keyframes rise2 {
     0% {
       top: 95%;
@@ -257,7 +260,7 @@ export const Bubble2 = styled.img`
     }
 
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 55%;
     }
   }
@@ -266,7 +269,7 @@ export const Bubble3 = styled.img`
   width: 1em;
   position: absolute;
 
-  animation: rise3 4s infinite ease-in;
+  animation: rise3 5s infinite ease-in;
   @keyframes rise3 {
     0% {
       top: 95%;
@@ -276,7 +279,7 @@ export const Bubble3 = styled.img`
       left: 43%;
     }
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 41%;
     }
   }
@@ -285,7 +288,7 @@ export const Bubble4 = styled.img`
   width: 0.7em;
   position: absolute;
 
-  animation: rise4 8s infinite ease-in;
+  animation: rise4 9s infinite ease-in;
   @keyframes rise4 {
     0% {
       top: 95%;
@@ -295,7 +298,7 @@ export const Bubble4 = styled.img`
     75% {
     }
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 48%;
     }
   }
@@ -305,7 +308,7 @@ export const Bubble5 = styled.img`
   width: 1em;
   position: absolute;
 
-  animation: rise5 5s infinite ease-in;
+  animation: rise5 6s infinite ease-in;
   @keyframes rise5 {
     0% {
       top: 94%;
@@ -315,7 +318,7 @@ export const Bubble5 = styled.img`
       left: 82%;
     }
     100% {
-      top: calc(11em + 27vh);
+      top: 38vh;
       left: 80%;
     }
   }
