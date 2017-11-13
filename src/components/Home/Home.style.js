@@ -30,6 +30,7 @@ export const WelcomeText = styled.h1`
   font-family: 'Pompiere', cursive;
   font-weight: 100;
   font-size: 2.6em;
+  text-shadow: 1.2px 0px #000;
 `;
 
 export const Name = styled.span`
@@ -101,6 +102,11 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+
+  ${media.md`
+  flex-direction: row;
+  flex-wrap: wrap;
+`};
 `;
 
 export const Hero = styled.div`
@@ -148,11 +154,13 @@ export const Boat = styled.img`
 export const IntroSlideIn = styled.div`
   position: absolute;
   left: 100%;
-  top: 53vh;
-  font-size: calc(0.6em + 2.7vw);
+  top: 57vh;
+  font-size: calc(0.8em + 2.7vw);
   text-align: center;
   width: 90%;
   max-width: 40em;
+  text-shadow: 0.7px 1.6px #000;
+  z-index: 1;
   animation: slide-in 0.5s 3.2s forwards ease;
 
   @keyframes slide-in {
@@ -202,6 +210,14 @@ export const Intro = styled.div`
 `;
 
 export const IntroP = styled.p``;
+
+export const SkillsBox = styled.div`
+  border: 1px solid black;
+  display: flex;
+  width: 39%;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Bubble0 = styled.img`
   width: 0.7em;
