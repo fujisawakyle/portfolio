@@ -26,11 +26,11 @@ export const HeroText = styled.h1`
 export const WelcomeText = styled.h1`
   position: absolute;
   z-index: 1;
-  top: 10%;
-  left: 20%;
+  top: 5%;
+  left: 17%;
   font-family: 'Pompiere', cursive;
   font-weight: 100;
-  font-size: 2.6em;
+  font-size: calc(1.8em + 2.5vw);
   text-shadow: 1.2px 0px #000;
 `;
 
@@ -102,11 +102,16 @@ export const Nav = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 80%;
+`;
+
+export const SkillsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
 
-  ${media.md`
+  ${media.sm`
   flex-direction: row;
   flex-wrap: wrap;
 `};
@@ -219,6 +224,15 @@ export const SkillsBox = styled.div`
   margin: 0.5em;
   display: flex;
   width: 39%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SkillsRectangle = styled.div`
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5em;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;

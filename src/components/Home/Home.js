@@ -25,9 +25,11 @@ import {
   Intro,
   Footer,
   IntroP,
+  SkillsContainer,
   ContentContainer,
   IntroSlideIn,
-  SkillsBox
+  SkillsBox,
+  SkillsRectangle
 } from './Home.style';
 
 import BoatGraphic from '../../assets/graphics/Boat.svg';
@@ -68,38 +70,45 @@ export default class Home extends Component {
           <Nav>
             <ul>
               <li>
-                <a href="/projects">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>About</li>
               <li>
-                <a href="/projects">Project</a>
+                <a href="/projects">Projects</a>
               </li>
               <li>Contact</li>
             </ul>
           </Nav>
-          Skills
           <ContentContainer>
-            <SkillsBox>
-              Languages <br />
-              <br /> Javascript(ES6) CSS/Sass HTML
-            </SkillsBox>
-            <SkillsBox>
-              Libraries <br />
-              <br /> React Middleman jQuery
-            </SkillsBox>
-            <SkillsBox>
-              Development practices <br />
-              <br /> Mobile and responsive design, BEM Methodology, RESTful
-              API's , Flexbox, Styled Components, AJAX, Oauth, Git + Github
-              Linux command line, Chrome Dev Tools, lodash
-            </SkillsBox>
-            <SkillsBox>
-              Knowledge of: <br />
-              <br /> wordpress, some rails, some node.js, mongoDB, express soft
-              skills communication, transparency, resourceful, big advocate for
-              weekly meet ups and sharing what you are learning by teaching
-              others
-            </SkillsBox>
+            Skills
+            <SkillsContainer>
+              <SkillsBox>
+                Languages <br />
+                <br /> Javascript(ES6) <br /> CSS/Sass <br /> HTML
+              </SkillsBox>
+              <SkillsBox>
+                Libraries <br />
+                <br /> React <br /> Middleman <br /> jQuery
+              </SkillsBox>
+              <SkillsBox>
+                Development practices <br />
+                <br /> Mobile and responsive design <br /> BEM Methodology{' '}
+                <br /> RESTful API's <br /> Flexbox <br /> Styled Components{' '}
+                <br /> AJAX <br /> Oauth <br /> Git + Github <br /> Linux
+                command line <br /> Chrome Dev Tools <br /> lodash
+              </SkillsBox>
+              <SkillsBox>
+                Knowledge of: <br />
+                <br /> Wordpress <br /> Rails <br />node.js <br /> mongoDB{' '}
+                <br /> express soft skills communication, transparency,
+                resourceful, big advocate for weekly meet ups and sharing what
+                you are learning by teaching others
+              </SkillsBox>
+              <SkillsRectangle>
+                Currently learning: <br />
+                <br /> React <br /> CSS Grid
+              </SkillsRectangle>
+            </SkillsContainer>
           </ContentContainer>
         </Intro>
         <Fissure src={FissureGraphic} />
