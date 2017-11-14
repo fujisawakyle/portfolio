@@ -48,7 +48,7 @@ export default class Home extends Component {
           <IntroSlideIn>
             I'm a design-oriented front end developer based in Orange County,
             CA. I love building mobile-first websites and apps from scratch. I'm
-            currently focused on increasing my skills in React.js.
+            currently focused on increasing my skills in React.js and CSS grid.
           </IntroSlideIn>
         </Hero>
         <Bubble0 src={BubbleGraphic} />

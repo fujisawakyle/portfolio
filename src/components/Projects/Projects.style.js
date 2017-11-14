@@ -10,11 +10,24 @@ import OrangeCloud from '../../assets/graphics/OrangeCloud.svg';
 import PurpleCloud from '../../assets/graphics/PurpleCloud.svg';
 import RedCloud from '../../assets/graphics/RedCloud.svg';
 
+import { DownArrow } from '../../components/Home/Home.style';
+
 export const ProjectContainer = styled.div``;
 
 export const ProjectImage = styled.img`
   width: 40%;
   max-width: 40em;
+`;
+
+export const Hero = styled.div`
+  height: 100vh;
+  background: white;
+`;
+
+export const DarkArrow = styled(DownArrow)`
+  svg {
+    fill: black;
+  }
 `;
 
 export const RevealLeft = styled.p`
@@ -61,7 +74,7 @@ ${media.sm`
   display: flex;
 `;
 export const Panel = styled.div`
-  background: #1983fb;
+  background: #fff;
   z-index: 1;
   color: white;
   text-align: center;

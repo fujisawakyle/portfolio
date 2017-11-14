@@ -19,17 +19,9 @@ import downArrow from '../../assets/graphics/arrow-down.svg';
 import rightArrow from '../../assets/graphics/arrow-right.svg';
 import Boat3 from '../../assets/graphics/Boat.svg';
 
-import {
-  DownArrow,
-  Header,
-  Hero,
-  Name,
-  HeroImage,
-  HeroText,
-  WelcomeText,
-  Wave,
-  Boat
-} from '../Home/Home.style';
+import { DarkArrow, Hero } from '../Projects/Projects.style';
+
+import {} from '../Home/Home.style';
 
 export default class Projects extends Component {
   state = {
@@ -45,11 +37,7 @@ export default class Projects extends Component {
     return (
       <div>
         <Hero>
-          <Wave />
-          <Boat src={Boat3} width="6em" alt="Boat" />
-          {/* <Boat2 src={Boat3} width="6em" alt="Boat" /> */}
-          <DownArrow src={downArrow} width="1em" alt="downarrow" />
-          <WelcomeText>Hello there!</WelcomeText>
+          <DarkArrow src={downArrow} alt="downarrow" />
         </Hero>
         <h1>Projects</h1>
         <ProjectContainer>
