@@ -57,48 +57,51 @@ export default class Projects extends Component {
               </WhenInView>
             </MediflectionApp>
           </a>
+          <a href="https://kyleresume-300a6.firebaseapp.com/">
+            <ResumeApp>
+              <WhenInView>
+                {({ isInView }) => (
+                  <Panels>
+                    <Panel hide={isInView} />
 
-          <ResumeApp>
-            <WhenInView>
-              {({ isInView }) => (
-                <Panels>
-                  <Panel hide={isInView} />
+                    <Panel show={isInView} className={showclasses} />
 
-                  <Panel show={isInView} className={showclasses} />
+                    <Panel hide={isInView} />
+                  </Panels>
+                )}
+              </WhenInView>
+            </ResumeApp>
+          </a>
+          <a href="https://fujisawakyle.github.io/projects/weather/">
+            <WeatherApp>
+              <WhenInView>
+                {({ isInView }) => (
+                  <Panels>
+                    <Panel hide={isInView} />
 
-                  <Panel hide={isInView} />
-                </Panels>
-              )}
-            </WhenInView>
-          </ResumeApp>
+                    <Panel show={isInView} className={showclasses} />
 
-          <WeatherApp>
-            <WhenInView>
-              {({ isInView }) => (
-                <Panels>
-                  <Panel hide={isInView} />
+                    <Panel hide={isInView} />
+                  </Panels>
+                )}
+              </WhenInView>
+            </WeatherApp>
+          </a>
+          <a href="https://fujisawakyle.github.io/projects/calculator/">
+            <CalculatorApp>
+              <WhenInView>
+                {({ isInView }) => (
+                  <Panels>
+                    <Panel hide={isInView} />
 
-                  <Panel show={isInView} className={showclasses} />
+                    <Panel show={isInView} className={showclasses} />
 
-                  <Panel hide={isInView} />
-                </Panels>
-              )}
-            </WhenInView>
-          </WeatherApp>
-
-          <CalculatorApp>
-            <WhenInView>
-              {({ isInView }) => (
-                <Panels>
-                  <Panel hide={isInView} />
-
-                  <Panel show={isInView} className={showclasses} />
-
-                  <Panel hide={isInView} />
-                </Panels>
-              )}
-            </WhenInView>
-          </CalculatorApp>
+                    <Panel hide={isInView} />
+                  </Panels>
+                )}
+              </WhenInView>
+            </CalculatorApp>
+          </a>
           <br />
           <br />
           <br />

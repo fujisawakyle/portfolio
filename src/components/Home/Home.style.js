@@ -25,6 +25,7 @@ export const HeroText = styled.h1`
 
 export const WelcomeText = styled.h1`
   position: absolute;
+  z-index: 1;
   top: 10%;
   left: 20%;
   font-family: 'Pompiere', cursive;
@@ -101,6 +102,8 @@ export const Nav = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 80%;
 
   ${media.md`
@@ -154,8 +157,8 @@ export const Boat = styled.img`
 export const IntroSlideIn = styled.div`
   position: absolute;
   left: 100%;
-  top: 57vh;
-  font-size: calc(0.8em + 2.7vw);
+  top: calc(2em + 42vh + 4.8vw);
+  font-size: calc(0.3em + 1.8vh + 1.4vw);
   text-align: center;
   width: 90%;
   max-width: 40em;
@@ -212,7 +215,8 @@ export const Intro = styled.div`
 export const IntroP = styled.p``;
 
 export const SkillsBox = styled.div`
-  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5em;
   display: flex;
   width: 39%;
   justify-content: center;

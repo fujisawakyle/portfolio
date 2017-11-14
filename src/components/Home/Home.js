@@ -79,18 +79,26 @@ export default class Home extends Component {
           </Nav>
           Skills
           <ContentContainer>
-            <SkillsBox>Languages Javascript(ES6) CSS/Sass HTML</SkillsBox>
-            <SkillsBox>Libraries React Middleman jQuery</SkillsBox>
             <SkillsBox>
-              Development practices Mobile and responsive design, BEM
-              Methodology, RESTful API's , Flexbox, Styled Components, AJAX,
-              Oauth, Git + Github Linux command line, Chrome Dev Tools, lodash
+              Languages <br />
+              <br /> Javascript(ES6) CSS/Sass HTML
             </SkillsBox>
             <SkillsBox>
-              Knowledge of: wordpress, some rails, some node.js, mongoDB,
-              express soft skills communication, transparency, resourceful, big
-              advocate for weekly meet ups and sharing what you are learning by
-              teaching others
+              Libraries <br />
+              <br /> React Middleman jQuery
+            </SkillsBox>
+            <SkillsBox>
+              Development practices <br />
+              <br /> Mobile and responsive design, BEM Methodology, RESTful
+              API's , Flexbox, Styled Components, AJAX, Oauth, Git + Github
+              Linux command line, Chrome Dev Tools, lodash
+            </SkillsBox>
+            <SkillsBox>
+              Knowledge of: <br />
+              <br /> wordpress, some rails, some node.js, mongoDB, express soft
+              skills communication, transparency, resourceful, big advocate for
+              weekly meet ups and sharing what you are learning by teaching
+              others
             </SkillsBox>
           </ContentContainer>
         </Intro>
