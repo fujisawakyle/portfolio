@@ -34,16 +34,17 @@ export const RevealLeft = styled.p`
   position: relative;
 
   &:after {
-    content: ' ';
+    content: '';
+    border-left: 20px solid white;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    transform-origin: left;
-    transform: rotateY(90deg);
-    transition: transform 10s cubic-bezier(0.1, 2.7, 0.58, 1);
+    background-color: #1983fb;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+    transition: transform 20s cubic-bezier(0.1, 2.7, 0.58, 1);
   }
   ${({ hide }) =>
     hide &&
@@ -74,7 +75,7 @@ ${media.sm`
   display: flex;
 `;
 export const Panel = styled.div`
-  background: #fff;
+  background: #1983fb;
   z-index: 1;
   color: white;
   text-align: center;

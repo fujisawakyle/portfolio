@@ -37,8 +37,40 @@ import BoatGraphic from '../../assets/graphics/Boat.svg';
 import BubbleGraphic from '../../assets/graphics/bubble.svg';
 import RaysGraphic from '../../assets/graphics/samplerays.svg';
 
+import MediflectionAppImg from '../../assets/images/projects/MediflectionApp.png';
+import WeatherAppImg from '../../assets/images/projects/WeatherApp.png';
+import ResumeAppImg from '../../assets/images/projects/ResumeApp.png';
+import CalculatorAppImg from '../../assets/images/projects/CalculatorApp.png';
+
+import {
+  ProjectContainer,
+  ProjectImage,
+  RevealLeft,
+  Panels,
+  Panel,
+  ResumeApp,
+  WeatherApp,
+  CalculatorApp,
+  MediflectionApp
+} from '../Projects/Projects.style';
+import WhenInView from '../WhenInView/WhenInView';
+import classnames from 'classnames';
+import img1 from '../../assets/images/projects/WeatherApp.png';
+import RedCloud from '../../assets/graphics/RedCloud.svg';
+import rightArrow from '../../assets/graphics/arrow-right.svg';
+import Boat3 from '../../assets/graphics/Boat.svg';
+
 export default class Home extends Component {
+  state = {
+    open: false
+  };
+  revealProject = () => {
+    alert('yah');
+  };
   render() {
+    let showclasses = classnames('panel', 'panelmid', {
+      open: this.state.open
+    });
     return (
       <HomeContainer>
         <Hero>
@@ -68,7 +100,6 @@ export default class Home extends Component {
           />
           <br /> I'm <Name>Kyle</Name>
            */}
-
         <Intro>
           <Nav>
             <ul>
@@ -83,6 +114,66 @@ export default class Home extends Component {
             </ul>
           </Nav>
           <ContentContainer>
+            <SkillsTitle>Projects</SkillsTitle>
+            <ProjectContainer>
+              <WhenInView>
+                {({ isInView }) => (
+                  <RevealLeft hide={!isInView}>
+                    <a href="https://mediflection.herokuapp.com">
+                      <img src={MediflectionAppImg} style={{ width: '80%' }} />
+                    </a>
+                  </RevealLeft>
+                )}
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => (
+                  <RevealLeft hide={!isInView}>
+                    <a href="https://kyleresume-300a6.firebaseapp.com/">
+                      <img src={ResumeAppImg} style={{ width: '80%' }} />
+                    </a>
+                  </RevealLeft>
+                )}
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => (
+                  <RevealLeft hide={!isInView}>
+                    <a href="https://fujisawakyle.github.io/projects/weather/">
+                      <img src={WeatherAppImg} style={{ width: '80%' }} />
+                    </a>
+                  </RevealLeft>
+                )}
+              </WhenInView>
+
+              <WhenInView>
+                {({ isInView }) => (
+                  <RevealLeft hide={!isInView}>
+                    <a href="https://fujisawakyle.github.io/projects/calculator/">
+                      <img src={CalculatorAppImg} style={{ width: '80%' }} />
+                    </a>
+                  </RevealLeft>
+                )}
+              </WhenInView>
+
+              {/* <a href="https://mediflection.herokuapp.com">
+                <MediflectionApp>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <Panels>
+                         <img style={{ width: '50%' }} src={RedCloud} /> 
+                        <Panel hide={isInView} />
+
+                        <Panel show={isInView} className={showclasses} />
+
+                        <Panel hide={isInView} />
+                      </Panels>
+                    )}
+                  </WhenInView>
+                </MediflectionApp>
+              </a> */}
+            </ProjectContainer>
+
             <SkillsTitle>Skills</SkillsTitle>
             <SkillsContainer>
               <SkillsBox>

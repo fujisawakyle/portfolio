@@ -147,11 +147,11 @@ export const Boat = styled.img`
   width: calc(2em + 39vw - 10vw);
   max-width: 16em;
   position: absolute;
-  animation: sail-right 3s forwards linear, wave 2s infinite ease;
+  animation: sail-right 2s forwards linear, wave 2s infinite ease;
 
   @keyframes sail-right {
     0% {
-      left: -60%;
+      left: 0%;
     }
     100% {
       left: 40vw;
@@ -181,7 +181,7 @@ export const IntroSlideIn = styled.div`
   max-width: 40em;
   text-shadow: 0.7px 1.6px #000;
   z-index: 1;
-  animation: slide-in 0.5s 3.2s forwards ease;
+  animation: slide-in 0.5s 2.2s forwards ease;
 
   @keyframes slide-in {
     0% {
