@@ -29,7 +29,8 @@ import {
   ContentContainer,
   IntroSlideIn,
   SkillsBox,
-  SkillsRectangle
+  SkillsRectangle,
+  SkillsTitle
 } from './Home.style';
 
 import BoatGraphic from '../../assets/graphics/Boat.svg';
@@ -48,9 +49,11 @@ export default class Home extends Component {
           <DownArrow src={downArrow} alt="down arrow" />
           <WelcomeText>Hello there!</WelcomeText>
           <IntroSlideIn>
-            I'm a design-oriented front end developer based in Orange County,
-            CA. I love building mobile-first websites and apps from scratch. I'm
-            currently focused on increasing my skills in React.js and CSS grid.
+            I'm a design-oriented developer currently interning as a Web
+            Developer at{' '}
+            <a href="https://www.thehumaneleague.com">The Humane League</a>. I
+            love to build mobile-first websites and apps from scratch and am
+            focusing on increasing my React.js and CSS grid skills.
           </IntroSlideIn>
         </Hero>
         <Bubble0 src={BubbleGraphic} />
@@ -80,7 +83,7 @@ export default class Home extends Component {
             </ul>
           </Nav>
           <ContentContainer>
-            Skills
+            <SkillsTitle>Skills</SkillsTitle>
             <SkillsContainer>
               <SkillsBox>
                 Languages <br />

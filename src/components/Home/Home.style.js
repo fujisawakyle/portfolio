@@ -97,6 +97,10 @@ export const Nav = styled.div`
   li {
     list-style: none;
   }
+  display: none;
+  ${media.sm`
+    display:block;
+  `};
 `;
 
 export const ContentContainer = styled.div`
@@ -115,6 +119,14 @@ export const SkillsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 `};
+`;
+
+export const SkillsTitle = styled.h1`
+  border-bottom: 2px solid #44f544;
+  margin-left: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: left;
+  width: 20%;
 `;
 
 export const Hero = styled.div`
@@ -223,9 +235,12 @@ export const SkillsBox = styled.div`
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5em;
   display: flex;
-  width: 39%;
   justify-content: center;
   align-items: center;
+  width: 95%;
+  ${media.md`
+    width: 39%;
+  `};
 `;
 
 export const SkillsRectangle = styled.div`
