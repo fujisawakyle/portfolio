@@ -235,13 +235,20 @@ export const IntroP = styled.p``;
 export const SkillsBox = styled.div`
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 95%;
   ${media.md`
     width: 39%;
   `};
+`;
+
+export const SkillsBoxIconContainer = styled.div`display: flex;align-items: center;
+justify-content: center;
+}
+
+
+
+
+
 `;
 
 export const SkillsRectangle = styled.div`

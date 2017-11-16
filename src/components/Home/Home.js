@@ -30,12 +30,16 @@ import {
   IntroSlideIn,
   SkillsBox,
   SkillsRectangle,
-  SkillsTitle
+  SkillsTitle,
+  SkillsBoxIconContainer
 } from './Home.style';
 
 import BoatGraphic from '../../assets/graphics/Boat.svg';
 import BubbleGraphic from '../../assets/graphics/bubble.svg';
 import RaysGraphic from '../../assets/graphics/sunshine4u.svg';
+import JSfile from '../../assets/graphics/JSfile.svg';
+import HTMLfile from '../../assets/graphics/HTMLfile.svg';
+import CSSfile from '../../assets/graphics/CSSfile.svg';
 
 import MediflectionAppImg from '../../assets/images/projects/MediflectionApp.png';
 import WeatherAppImg from '../../assets/images/projects/WeatherApp.png';
@@ -177,8 +181,13 @@ export default class Home extends Component {
             <SkillsTitle>Skills</SkillsTitle>
             <SkillsContainer>
               <SkillsBox>
-                Languages <br />
-                <br /> Javascript(ES6) <br /> CSS/Sass <br /> HTML
+                Languages
+                <br /> <br />
+                <SkillsBoxIconContainer>
+                  <img src={JSfile} style={{ width: '30%' }} />
+                  <img src={HTMLfile} style={{ width: '30%' }} />
+                  <img src={CSSfile} style={{ width: '30%' }} />
+                </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
                 Libraries <br />
