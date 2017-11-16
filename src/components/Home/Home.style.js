@@ -50,10 +50,11 @@ export const Sun = styled.img`
 
 export const Rays = styled.img`
   position: absolute;
-  top: 25px;
-  right: 23px;
+  top: 3%;
+  right: 5%;
+  width: calc(7em + 5vw);
   z-index: 1;
-  animation: spin 80s infinite linear;
+  animation: spin 20s infinite linear;
 
   @keyframes spin {
     from {

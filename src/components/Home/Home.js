@@ -35,7 +35,7 @@ import {
 
 import BoatGraphic from '../../assets/graphics/Boat.svg';
 import BubbleGraphic from '../../assets/graphics/bubble.svg';
-import RaysGraphic from '../../assets/graphics/samplerays.svg';
+import RaysGraphic from '../../assets/graphics/sunshine4u.svg';
 
 import MediflectionAppImg from '../../assets/images/projects/MediflectionApp.png';
 import WeatherAppImg from '../../assets/images/projects/WeatherApp.png';
@@ -186,21 +186,19 @@ export default class Home extends Component {
               </SkillsBox>
               <SkillsBox>
                 Development practices <br />
-                <br /> Mobile and responsive design <br /> BEM Methodology{' '}
-                <br /> RESTful API's <br /> Flexbox <br /> Styled Components{' '}
-                <br /> AJAX <br /> Oauth <br /> Git + Github <br /> Linux
-                command line <br /> Chrome Dev Tools <br /> lodash
+                <br /> responsive design <br /> Git + Github <br /> BEM
+                Methodology <br /> RESTful API's <br /> Flexbox <br /> AJAX{' '}
+                <br /> Oauth <br /> Linux command line <br /> Chrome Dev Tools{' '}
+                <br /> Lodash
               </SkillsBox>
               <SkillsBox>
                 Knowledge of: <br />
                 <br /> Wordpress <br /> Rails <br />node.js <br /> mongoDB{' '}
-                <br /> express soft skills communication, transparency,
-                resourceful, big advocate for weekly meet ups and sharing what
-                you are learning by teaching others
+                <br /> express
               </SkillsBox>
               <SkillsRectangle>
                 Currently learning: <br />
-                <br /> React <br /> CSS Grid
+                <br /> React <br /> CSS Grid <br /> Styled Components <br />
               </SkillsRectangle>
             </SkillsContainer>
           </ContentContainer>
