@@ -54,6 +54,7 @@ import ResumeAppImg from '../../assets/images/projects/ResumeApp.png';
 import CalculatorAppImg from '../../assets/images/projects/CalculatorApp.png';
 
 import {
+  Projects,
   ProjectInfoContainer,
   ProjectContainer,
   ProjectTitle,
@@ -132,36 +133,124 @@ export default class Home extends Component {
             </ul>
           </Nav>
           <ContentContainer>
-            <SkillsTitle>Work Projects</SkillsTitle>
-            <WorkProjects>
+            <Projects>
+              <SkillsTitle>Work Projects</SkillsTitle>
+              <WorkProjects>
+                <ProjectContainer>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <RevealFromLeft hide={!isInView}>
+                        <a href="https://dardenbrands.com">
+                          <img
+                            src={DardenWebsiteImg}
+                            style={{ width: '80%' }}
+                          />
+                        </a>
+                      </RevealFromLeft>
+                    )}
+                  </WhenInView>
+
+                  <ProjectInfoContainer>
+                    <ProjectTitle>Darden Cruelty</ProjectTitle>
+                    <ProjectDescriptionRight>
+                      Created this site based on the mockup provided by the team
+                      designer. Worked with the Twitter API to build a custom
+                      tweet display.
+                    </ProjectDescriptionRight>
+                  </ProjectInfoContainer>
+                </ProjectContainer>
+                <ProjectContainer>
+                  <ImageRightContainer>
+                    <WhenInView style={{ order: '1' }}>
+                      {({ isInView }) => (
+                        <RevealFromRight hide={!isInView}>
+                          <a href="https://campaigns.thehumaneleague.org/big-and-fresh/">
+                            <img
+                              src={BigAndFreshWebsiteImg}
+                              style={{ width: '80%' }}
+                            />
+                          </a>
+                        </RevealFromRight>
+                      )}
+                    </WhenInView>
+                  </ImageRightContainer>
+                  <ProjectInfoContainer>
+                    <ProjectDescriptionLeft>
+                      Built a new twitter and instagram feed for the custom CMS.
+                    </ProjectDescriptionLeft>
+                    <ProjectTitle>Social Feed</ProjectTitle>
+                  </ProjectInfoContainer>
+                </ProjectContainer>
+              </WorkProjects>
+              <SkillsTitle>Personal Projects</SkillsTitle>
               <ProjectContainer>
                 <WhenInView>
                   {({ isInView }) => (
                     <RevealFromLeft hide={!isInView}>
-                      <a href="https://dardenbrands.com">
-                        <img src={DardenWebsiteImg} style={{ width: '80%' }} />
+                      <a href="https://mediflection.herokuapp.com">
+                        <img
+                          src={MediflectionAppImg}
+                          style={{ width: '80%' }}
+                        />
                       </a>
                     </RevealFromLeft>
                   )}
                 </WhenInView>
-
                 <ProjectInfoContainer>
-                  <ProjectTitle>Darden Cruelty</ProjectTitle>
+                  <ProjectTitle>Mediflection</ProjectTitle>
                   <ProjectDescriptionRight>
-                    Created this site based on the mockup provided by the team
-                    designer. Worked with the Twitter API to build a custom
-                    tweet display.
+                    Built using MERN stack app (Redux) with Google Oauth sign
+                    in. Custom UI/UX design using third party calendar and graph
+                    libraries.
                   </ProjectDescriptionRight>
                 </ProjectInfoContainer>
               </ProjectContainer>
               <ProjectContainer>
                 <ImageRightContainer>
-                  <WhenInView style={{ order: '1' }}>
+                  <WhenInView>
                     {({ isInView }) => (
                       <RevealFromRight hide={!isInView}>
-                        <a href="https://campaigns.thehumaneleague.org/big-and-fresh/">
+                        <a href="https://kyleresume-300a6.firebaseapp.com/">
+                          <img src={ResumeAppImg} style={{ width: '80%' }} />
+                        </a>
+                      </RevealFromRight>
+                    )}
+                  </WhenInView>
+                </ImageRightContainer>
+                <ProjectInfoContainer>
+                  <ProjectDescriptionLeft>
+                    My first React.js and firebasehosting app.
+                  </ProjectDescriptionLeft>
+                  <ProjectTitle>Online Resume</ProjectTitle>
+                </ProjectInfoContainer>
+              </ProjectContainer>
+              <ProjectContainer>
+                <WhenInView>
+                  {({ isInView }) => (
+                    <RevealFromLeft hide={!isInView}>
+                      <a href="https://fujisawakyle.github.io/projects/weather/">
+                        <img src={WeatherAppImg} style={{ width: '80%' }} />
+                      </a>
+                    </RevealFromLeft>
+                  )}
+                </WhenInView>
+                <ProjectInfoContainer>
+                  <ProjectTitle>Local Weather</ProjectTitle>
+                  <ProjectDescriptionRight>
+                    Used openweathermap API to gather local weather. Custom UI
+                    design.
+                  </ProjectDescriptionRight>
+                </ProjectInfoContainer>
+              </ProjectContainer>
+
+              <ProjectContainer>
+                <ImageRightContainer>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <RevealFromRight hide={!isInView}>
+                        <a href="https://fujisawakyle.github.io/projects/calculator/">
                           <img
-                            src={BigAndFreshWebsiteImg}
+                            src={CalculatorAppImg}
                             style={{ width: '80%' }}
                           />
                         </a>
@@ -171,104 +260,27 @@ export default class Home extends Component {
                 </ImageRightContainer>
                 <ProjectInfoContainer>
                   <ProjectDescriptionLeft>
-                    Built a new twitter and instagram feed for the custom CMS.
+                    Custom UI and functional calculator
                   </ProjectDescriptionLeft>
-                  <ProjectTitle>Social Feed</ProjectTitle>
+                  <ProjectTitle>Calculator</ProjectTitle>
                 </ProjectInfoContainer>
               </ProjectContainer>
-            </WorkProjects>
-            <SkillsTitle>Personal Projects</SkillsTitle>
-            <ProjectContainer>
-              <WhenInView>
-                {({ isInView }) => (
-                  <RevealFromLeft hide={!isInView}>
-                    <a href="https://mediflection.herokuapp.com">
-                      <img src={MediflectionAppImg} style={{ width: '80%' }} />
-                    </a>
-                  </RevealFromLeft>
-                )}
-              </WhenInView>
-              <ProjectInfoContainer>
-                <ProjectTitle>Mediflection</ProjectTitle>
-                <ProjectDescriptionRight>
-                  Built using MERN stack app (Redux) with Google Oauth sign in.
-                  Custom UI/UX design using third party calendar and graph
-                  libraries.
-                </ProjectDescriptionRight>
-              </ProjectInfoContainer>
-            </ProjectContainer>
-            <ProjectContainer>
-              <ImageRightContainer>
-                <WhenInView>
-                  {({ isInView }) => (
-                    <RevealFromRight hide={!isInView}>
-                      <a href="https://kyleresume-300a6.firebaseapp.com/">
-                        <img src={ResumeAppImg} style={{ width: '80%' }} />
-                      </a>
-                    </RevealFromRight>
-                  )}
-                </WhenInView>
-              </ImageRightContainer>
-              <ProjectInfoContainer>
-                <ProjectDescriptionLeft>
-                  My first React.js and firebasehosting app.
-                </ProjectDescriptionLeft>
-                <ProjectTitle>Online Resume</ProjectTitle>
-              </ProjectInfoContainer>
-            </ProjectContainer>
-            <ProjectContainer>
-              <WhenInView>
-                {({ isInView }) => (
-                  <RevealFromLeft hide={!isInView}>
-                    <a href="https://fujisawakyle.github.io/projects/weather/">
-                      <img src={WeatherAppImg} style={{ width: '80%' }} />
-                    </a>
-                  </RevealFromLeft>
-                )}
-              </WhenInView>
-              <ProjectInfoContainer>
-                <ProjectTitle>Local Weather</ProjectTitle>
-                <ProjectDescriptionRight>
-                  Used openweathermap API to gather local weather. Custom UI
-                  design.
-                </ProjectDescriptionRight>
-              </ProjectInfoContainer>
-            </ProjectContainer>
-
-            <ProjectContainer>
-              <ImageRightContainer>
-                <WhenInView>
-                  {({ isInView }) => (
-                    <RevealFromRight hide={!isInView}>
-                      <a href="https://fujisawakyle.github.io/projects/calculator/">
-                        <img src={CalculatorAppImg} style={{ width: '80%' }} />
-                      </a>
-                    </RevealFromRight>
-                  )}
-                </WhenInView>
-              </ImageRightContainer>
-              <ProjectInfoContainer>
-                <ProjectDescriptionLeft>
-                  Custom UI and functional calculator
-                </ProjectDescriptionLeft>
-                <ProjectTitle>Calculator</ProjectTitle>
-              </ProjectInfoContainer>
-            </ProjectContainer>
+            </Projects>
 
             {/* <a href="https://mediflection.herokuapp.com">
                 <MediflectionApp>
-                  <WhenInView>
-                    {({ isInView }) => (
-                      <Panels>
-                         <img style={{ width: '50%' }} src={RedCloud} /> 
-                        <Panel hide={isInView} />
-
-                        <Panel show={isInView} className={showclasses} />
-
-                        <Panel hide={isInView} />
-                      </Panels>
-                    )}
-                  </WhenInView>
+                <WhenInView>
+                {({ isInView }) => (
+                  <Panels>
+                  <img style={{ width: '50%' }} src={RedCloud} /> 
+                  <Panel hide={isInView} />
+                  
+                  <Panel show={isInView} className={showclasses} />
+                  
+                  <Panel hide={isInView} />
+                  </Panels>
+                )}
+                </WhenInView>
                 </MediflectionApp>
               </a> */}
 

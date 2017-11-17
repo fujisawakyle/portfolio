@@ -108,7 +108,9 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
 
+export const Projects = styled.div`
   img {
     transition: all 1.5s ease-in-out;
   }
@@ -189,7 +191,7 @@ export const IntroSlideIn = styled.div`
   max-width: 40em;
   text-shadow: 0.7px 1.6px #000;
   z-index: 1;
-  animation: slide-in 0.5s 2.2s forwards ease;
+  animation: slide-in 0.5s 2s forwards ease;
 
   @keyframes slide-in {
     0% {

@@ -12,6 +12,15 @@ import RedCloud from '../../assets/graphics/RedCloud.svg';
 
 import { DownArrow } from '../../components/Home/Home.style';
 
+export const Projects = styled.div`
+  img {
+    transition: all 1.5s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+`;
+
 export const ProjectContainer = styled.div`
   display: flex:
   flex-direction: column;
