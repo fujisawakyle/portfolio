@@ -108,6 +108,13 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  img {
+    transition: all 1.5s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const SkillsContainer = styled.div`
