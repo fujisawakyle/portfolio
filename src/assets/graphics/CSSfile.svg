@@ -18,14 +18,14 @@
             <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <polygon id="path-5" points="22.9940828 6 325 6 304.106509 195 4 195"></polygon>
+        <polygon id="path-5" points="23.9940828 7 326 7 305.106509 196 5 196"></polygon>
         <filter x="-2.2%" y="-2.6%" width="104.4%" height="107.4%" filterUnits="objectBoundingBox" id="filter-6">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <polygon id="path-7" points="27.9940828 12 330 12 309.106509 201 9 201"></polygon>
+        <polygon id="path-7" points="26.9940828 13 329 13 308.106509 202 8 202"></polygon>
         <filter x="-2.2%" y="-2.6%" width="104.4%" height="107.4%" filterUnits="objectBoundingBox" id="filter-8">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
@@ -47,7 +47,7 @@
                 <use fill="#7A61BA" fill-rule="evenodd" xlink:href="#path-1"></use>
                 <path stroke="#000000" stroke-width="2" d="M10.6810044,244 L325.982204,244 L322.013762,19 L79.152686,19 L74.1865725,9.07699429 C72.3225346,5.35237964 68.5147224,3 64.3497024,3 L16.0000735,3 C15.9094716,3 15.8188733,3.00111937 15.7282991,3.00335784 C9.65502135,3.15345467 4.85333448,8.19849659 5.00343131,14.2717743 L10.6810044,244 Z"></path>
             </g>
-            <g id="paper-copy-2" transform="translate(17.000000, 25.000000)">
+            <g id="paper-copy" transform="translate(19.000000, 24.000000)">
                 <g id="Path-Copy">
                     <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
                     <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-3"></use>
@@ -56,12 +56,12 @@
                 <g id="Path-Copy-2">
                     <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
                     <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-5"></use>
-                    <path stroke="#252424" stroke-width="2" d="M23.8986223,7 L5.10553501,194 L303.210965,194 L323.883361,7 L23.8986223,7 Z"></path>
+                    <path stroke="#252424" stroke-width="2" d="M24.8986223,8 L6.10553501,195 L304.210965,195 L324.883361,8 L24.8986223,8 Z"></path>
                 </g>
                 <g id="Path-Copy-3">
                     <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
                     <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-7"></use>
-                    <path stroke="#252424" stroke-width="2" d="M28.8986223,13 L10.105535,200 L308.210965,200 L328.883361,13 L28.8986223,13 Z"></path>
+                    <path stroke="#252424" stroke-width="2" d="M27.8986223,14 L9.10553501,201 L307.210965,201 L327.883361,14 L27.8986223,14 Z"></path>
                 </g>
             </g>
             <g id="folderFront-Copy-2">
@@ -69,12 +69,13 @@
                 <use fill="#7A61BA" fill-rule="evenodd" xlink:href="#path-9"></use>
                 <path stroke="#000000" stroke-width="2" d="M34.9045352,47 L15.1055402,244 L329.10446,244 L350.883355,47 L34.9045352,47 Z"></path>
             </g>
-            <text id="(Sass)" font-family="KohinoorBangla-Bold, Kohinoor Bangla" font-size="51" font-weight="bold" fill="#95E9DF">
+            <text id="(Sass)" font-family="KohinoorBangla-Bold, Kohinoor Bangla" font-size="51" font-weight="bold" fill="#60DAFB">
                 <tspan x="110.223" y="208">(Sass)</tspan>
             </text>
-            <text id="CSS3" font-family="KohinoorBangla-Bold, Kohinoor Bangla" font-size="101" font-weight="bold" fill="#95E9DF">
-                <tspan x="81.8975" y="144">CSS</tspan>
-                <tspan x="257.3345" y="144" font-size="64">3</tspan>
+            <text id="CSS3" font-family="KohinoorBangla-Bold, Kohinoor Bangla" font-size="101" font-weight="bold">
+                <tspan x="81.8975" y="144" fill="#60DAFB">CSS</tspan>
+                <tspan x="257.3345" y="144" font-size="64" fill="#60DAFB">3</tspan>
+                <tspan x="290.1025" y="144" font-size="64" fill="#95E9DF"></tspan>
             </text>
         </g>
     </g>

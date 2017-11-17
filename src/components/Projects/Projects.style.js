@@ -12,11 +12,74 @@ import RedCloud from '../../assets/graphics/RedCloud.svg';
 
 import { DownArrow } from '../../components/Home/Home.style';
 
-export const ProjectContainer = styled.div``;
+export const ProjectContainer = styled.div`
+  display: flex:
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  ${media.lg`
+    display:flex;
+    flex-direction: row;
+  `}
+`;
+
+export const ProjectInfoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${media.lg`
+  display: flex;
+  flex-direction: column;`};
+`;
+
+export const ProjectTitle = styled.div`
+  font-size: 1.5em;
+  padding: 0 10px;
+  ${media.lg`
+  padding:0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  `};
+`;
+
+export const ProjectDescription = styled.div`
+  font-size: 1em;
+  ${media.lg`
+  padding-top: 10px;
+  order:1;
+  `};
+`;
+
+export const ProjectDescriptionRight = styled(ProjectDescription)`
+  padding-left: 10px;
+  border-left: 2px solid #fff;
+  ${media.lg`
+    padding-left: 0;
+    border: none;
+  `};
+`;
+
+export const ProjectDescriptionLeft = styled(ProjectDescription)`
+  padding-right: 10px;
+  border-right: 2px solid #fff;
+  ${media.lg`
+  padding-right: 0;
+  border: none;
+`};
+`;
+
+export const WorkProjects = styled.div``;
 
 export const ProjectImage = styled.img`
   width: 40%;
   max-width: 40em;
+`;
+
+export const ImageRightContainer = styled.div`
+  ${media.lg`
+    order: 1;
+  `};
 `;
 
 export const Hero = styled.div`
@@ -30,7 +93,7 @@ export const DarkArrow = styled(DownArrow)`
   }
 `;
 
-export const RevealLeft = styled.p`
+export const RevealFromLeft = styled.div`
   position: relative;
 
   &:after {
@@ -44,7 +107,7 @@ export const RevealLeft = styled.p`
     background-color: #1983fb;
     transform-origin: right;
     transform: rotateY(-90deg);
-    transition: transform 20s cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition: transform 1s linear;
   }
   ${({ hide }) =>
     hide &&
@@ -58,6 +121,38 @@ export const RevealLeft = styled.p`
     css`
       &:after {
         transform: rotateY(90deg);
+      }
+    `};
+`;
+
+export const RevealFromRight = styled.div`
+  position: relative;
+
+  &:after {
+    content: '';
+    border-right: 20px solid white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1983fb;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    transition: transform 1s linear;
+  }
+  ${({ hide }) =>
+    hide &&
+    css`
+      &:after {
+        transform: rotateY(0deg);
+      }
+    `};
+  ${({ show }) =>
+    show &&
+    css`
+      &:after {
+        transform: rotateY(-90deg);
       }
     `};
 `;

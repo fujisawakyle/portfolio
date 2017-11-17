@@ -31,7 +31,9 @@ import {
   SkillsBox,
   SkillsRectangle,
   SkillsTitle,
-  SkillsBoxIconContainer
+  SkillsBoxIconContainer,
+  SkillsItemContainer,
+  SkillsItem
 } from './Home.style';
 
 import BoatGraphic from '../../assets/graphics/Boat.svg';
@@ -40,16 +42,28 @@ import RaysGraphic from '../../assets/graphics/sunshine4u.svg';
 import JSfile from '../../assets/graphics/JSfile.svg';
 import HTMLfile from '../../assets/graphics/HTMLfile.svg';
 import CSSfile from '../../assets/graphics/CSSfile.svg';
+import reactLogo from '../../assets/graphics/reactLogo.svg';
+import middlemanLogo from '../../assets/graphics/middlemanLogo.svg';
+import jQueryLogo from '../../assets/graphics/jQueryLogo.svg';
 
+import DardenWebsiteImg from '../../assets/images/projects/dardenWebsite.png';
+import BigAndFreshWebsiteImg from '../../assets/images/projects/bigandfreshWebiste.png';
 import MediflectionAppImg from '../../assets/images/projects/MediflectionApp.png';
 import WeatherAppImg from '../../assets/images/projects/WeatherApp.png';
 import ResumeAppImg from '../../assets/images/projects/ResumeApp.png';
 import CalculatorAppImg from '../../assets/images/projects/CalculatorApp.png';
 
 import {
+  ProjectInfoContainer,
   ProjectContainer,
+  ProjectTitle,
+  ProjectDescriptionRight,
+  ProjectDescriptionLeft,
   ProjectImage,
-  RevealLeft,
+  ImageRightContainer,
+  WorkProjects,
+  RevealFromLeft,
+  RevealFromRight,
   Panels,
   Panel,
   ResumeApp,
@@ -92,12 +106,12 @@ export default class Home extends Component {
             focusing on increasing my React.js and CSS grid skills.
           </IntroSlideIn>
         </Hero>
-        <Bubble0 src={BubbleGraphic} />
+        {/* <Bubble0 src={BubbleGraphic} />
         <Bubble1 src={BubbleGraphic} />
         <Bubble2 src={BubbleGraphic} />
         <Bubble3 src={BubbleGraphic} />
         <Bubble4 src={BubbleGraphic} />
-        <Bubble5 src={BubbleGraphic} />
+        <Bubble5 src={BubbleGraphic} /> */}
         {/* <HeroImage
           src={require('../../assets/images/kyle.jpg')}
           alt="Kyle hero image"
@@ -118,49 +132,130 @@ export default class Home extends Component {
             </ul>
           </Nav>
           <ContentContainer>
-            <SkillsTitle>Projects</SkillsTitle>
+            <SkillsTitle>Work Projects</SkillsTitle>
+            <WorkProjects>
+              <ProjectContainer>
+                <WhenInView>
+                  {({ isInView }) => (
+                    <RevealFromLeft hide={!isInView}>
+                      <a href="https://dardenbrands.com">
+                        <img src={DardenWebsiteImg} style={{ width: '80%' }} />
+                      </a>
+                    </RevealFromLeft>
+                  )}
+                </WhenInView>
+
+                <ProjectInfoContainer>
+                  <ProjectTitle>Darden Cruelty</ProjectTitle>
+                  <ProjectDescriptionRight>
+                    Created this site based on the mockup provided by the team
+                    designer. Worked with the Twitter API to build a custom
+                    tweet display.
+                  </ProjectDescriptionRight>
+                </ProjectInfoContainer>
+              </ProjectContainer>
+              <ProjectContainer>
+                <ImageRightContainer>
+                  <WhenInView style={{ order: '1' }}>
+                    {({ isInView }) => (
+                      <RevealFromRight hide={!isInView}>
+                        <a href="https://campaigns.thehumaneleague.org/big-and-fresh/">
+                          <img
+                            src={BigAndFreshWebsiteImg}
+                            style={{ width: '80%' }}
+                          />
+                        </a>
+                      </RevealFromRight>
+                    )}
+                  </WhenInView>
+                </ImageRightContainer>
+                <ProjectInfoContainer>
+                  <ProjectDescriptionLeft>
+                    Built a new twitter and instagram feed for the custom CMS.
+                  </ProjectDescriptionLeft>
+                  <ProjectTitle>Social Feed</ProjectTitle>
+                </ProjectInfoContainer>
+              </ProjectContainer>
+            </WorkProjects>
+            <SkillsTitle>Personal Projects</SkillsTitle>
             <ProjectContainer>
               <WhenInView>
                 {({ isInView }) => (
-                  <RevealLeft hide={!isInView}>
+                  <RevealFromLeft hide={!isInView}>
                     <a href="https://mediflection.herokuapp.com">
                       <img src={MediflectionAppImg} style={{ width: '80%' }} />
                     </a>
-                  </RevealLeft>
+                  </RevealFromLeft>
                 )}
               </WhenInView>
-
+              <ProjectInfoContainer>
+                <ProjectTitle>Mediflection</ProjectTitle>
+                <ProjectDescriptionRight>
+                  Built using MERN stack app (Redux) with Google Oauth sign in.
+                  Custom UI/UX design using third party calendar and graph
+                  libraries.
+                </ProjectDescriptionRight>
+              </ProjectInfoContainer>
+            </ProjectContainer>
+            <ProjectContainer>
+              <ImageRightContainer>
+                <WhenInView>
+                  {({ isInView }) => (
+                    <RevealFromRight hide={!isInView}>
+                      <a href="https://kyleresume-300a6.firebaseapp.com/">
+                        <img src={ResumeAppImg} style={{ width: '80%' }} />
+                      </a>
+                    </RevealFromRight>
+                  )}
+                </WhenInView>
+              </ImageRightContainer>
+              <ProjectInfoContainer>
+                <ProjectDescriptionLeft>
+                  My first React.js and firebasehosting app.
+                </ProjectDescriptionLeft>
+                <ProjectTitle>Online Resume</ProjectTitle>
+              </ProjectInfoContainer>
+            </ProjectContainer>
+            <ProjectContainer>
               <WhenInView>
                 {({ isInView }) => (
-                  <RevealLeft hide={!isInView}>
-                    <a href="https://kyleresume-300a6.firebaseapp.com/">
-                      <img src={ResumeAppImg} style={{ width: '80%' }} />
-                    </a>
-                  </RevealLeft>
-                )}
-              </WhenInView>
-
-              <WhenInView>
-                {({ isInView }) => (
-                  <RevealLeft hide={!isInView}>
+                  <RevealFromLeft hide={!isInView}>
                     <a href="https://fujisawakyle.github.io/projects/weather/">
                       <img src={WeatherAppImg} style={{ width: '80%' }} />
                     </a>
-                  </RevealLeft>
+                  </RevealFromLeft>
                 )}
               </WhenInView>
+              <ProjectInfoContainer>
+                <ProjectTitle>Local Weather</ProjectTitle>
+                <ProjectDescriptionRight>
+                  Used openweathermap API to gather local weather. Custom UI
+                  design.
+                </ProjectDescriptionRight>
+              </ProjectInfoContainer>
+            </ProjectContainer>
 
-              <WhenInView>
-                {({ isInView }) => (
-                  <RevealLeft hide={!isInView}>
-                    <a href="https://fujisawakyle.github.io/projects/calculator/">
-                      <img src={CalculatorAppImg} style={{ width: '80%' }} />
-                    </a>
-                  </RevealLeft>
-                )}
-              </WhenInView>
+            <ProjectContainer>
+              <ImageRightContainer>
+                <WhenInView>
+                  {({ isInView }) => (
+                    <RevealFromRight hide={!isInView}>
+                      <a href="https://fujisawakyle.github.io/projects/calculator/">
+                        <img src={CalculatorAppImg} style={{ width: '80%' }} />
+                      </a>
+                    </RevealFromRight>
+                  )}
+                </WhenInView>
+              </ImageRightContainer>
+              <ProjectInfoContainer>
+                <ProjectDescriptionLeft>
+                  Custom UI and functional calculator
+                </ProjectDescriptionLeft>
+                <ProjectTitle>Calculator</ProjectTitle>
+              </ProjectInfoContainer>
+            </ProjectContainer>
 
-              {/* <a href="https://mediflection.herokuapp.com">
+            {/* <a href="https://mediflection.herokuapp.com">
                 <MediflectionApp>
                   <WhenInView>
                     {({ isInView }) => (
@@ -176,7 +271,6 @@ export default class Home extends Component {
                   </WhenInView>
                 </MediflectionApp>
               </a> */}
-            </ProjectContainer>
 
             <SkillsTitle>Skills</SkillsTitle>
             <SkillsContainer>
@@ -184,30 +278,51 @@ export default class Home extends Component {
                 Languages
                 <br /> <br />
                 <SkillsBoxIconContainer>
-                  <img src={JSfile} style={{ width: '30%' }} />
-                  <img src={HTMLfile} style={{ width: '30%' }} />
-                  <img src={CSSfile} style={{ width: '30%' }} />
+                  <img src={JSfile} style={{ width: '26.6%' }} />
+                  <img src={HTMLfile} style={{ width: '26.6%' }} />
+                  <img src={CSSfile} style={{ width: '26.6%' }} />
                 </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
                 Libraries <br />
-                <br /> React <br /> Middleman <br /> jQuery
+                <br />
+                <SkillsBoxIconContainer>
+                  <img src={reactLogo} style={{ width: '25%' }} />
+                  <img src={middlemanLogo} style={{ width: '25%' }} />
+                  <img src={jQueryLogo} style={{ width: '30%' }} />
+                </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
-                Development practices <br />
-                <br /> responsive design <br /> Git + Github <br /> BEM
-                Methodology <br /> RESTful API's <br /> Flexbox <br /> AJAX{' '}
-                <br /> Oauth <br /> Linux command line <br /> Chrome Dev Tools{' '}
-                <br /> Lodash
+                Development<br />
+                <SkillsItemContainer>
+                  <SkillsItem>Responsive Design</SkillsItem>
+                  <SkillsItem>Git + Github</SkillsItem>
+                  <SkillsItem>BEM Methodology</SkillsItem>
+                  <SkillsItem>Flexbox</SkillsItem>
+                  <SkillsItem>Chrome Dev Tools</SkillsItem>
+                  <SkillsItem>Linux command line</SkillsItem>
+                  <SkillsItem>Lodash</SkillsItem>
+                </SkillsItemContainer>
               </SkillsBox>
               <SkillsBox>
                 Knowledge of: <br />
-                <br /> Wordpress <br /> Rails <br />node.js <br /> mongoDB{' '}
-                <br /> express
+                <SkillsItemContainer>
+                  <SkillsItem>RESTful API</SkillsItem>
+                  <SkillsItem>Wordpress</SkillsItem>
+                  <SkillsItem>Rails</SkillsItem>
+                  <SkillsItem>Node.js</SkillsItem>
+                  <SkillsItem>express</SkillsItem>
+                  <SkillsItem>mongoDB</SkillsItem>
+                  <SkillsItem>Oauth</SkillsItem>
+                </SkillsItemContainer>
               </SkillsBox>
               <SkillsRectangle>
                 Currently learning: <br />
-                <br /> React <br /> CSS Grid <br /> Styled Components <br />
+                <SkillsItemContainer>
+                  <SkillsItem>CSS Grid</SkillsItem>
+                  <SkillsItem>Styled Components</SkillsItem>
+                  <SkillsItem>TDD (Jest, Mocha)</SkillsItem>
+                </SkillsItemContainer>
               </SkillsRectangle>
             </SkillsContainer>
           </ContentContainer>

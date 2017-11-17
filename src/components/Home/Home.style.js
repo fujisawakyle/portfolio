@@ -107,7 +107,7 @@ export const Nav = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 `;
 
 export const SkillsContainer = styled.div`
@@ -115,7 +115,7 @@ export const SkillsContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  z-index: 1;
   ${media.sm`
   flex-direction: row;
   flex-wrap: wrap;
@@ -127,7 +127,7 @@ export const SkillsTitle = styled.h1`
   margin-left: 0.5em;
   padding-bottom: 0.5em;
   text-align: left;
-  width: 20%;
+  display: table;
 `;
 
 export const Hero = styled.div`
@@ -236,19 +236,33 @@ export const SkillsBox = styled.div`
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5em;
   width: 95%;
-  ${media.md`
-    width: 39%;
+  padding: 20px;
+  ${media.lg`
+    width: 47%;
   `};
 `;
 
-export const SkillsBoxIconContainer = styled.div`display: flex;align-items: center;
-justify-content: center;
-}
+export const SkillsItemContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 
+  > * {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+`;
+export const SkillsItem = styled.div`
+  width: 30%;
+  background: rgba(96, 218, 251, 0.45);
+  margin: 0.2em;
+`;
 
-
-
-
+export const SkillsBoxIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 export const SkillsRectangle = styled.div`
@@ -256,6 +270,7 @@ export const SkillsRectangle = styled.div`
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
