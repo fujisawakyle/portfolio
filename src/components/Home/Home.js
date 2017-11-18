@@ -5,6 +5,8 @@ import FissureGraphic from '../../assets/graphics/fissure.svg';
 import {
   DownArrow,
   Nav,
+  SideBar,
+  Contact,
   Hero,
   Name,
   HeroImage,
@@ -120,18 +122,23 @@ export default class Home extends Component {
           <br /> I'm <Name>Kyle</Name>
            */}
         <Intro>
-          <Nav>
-            <ul>
-              <li>
+          <SideBar>
+            <Nav>
+              <div>
                 <a href="/">Home</a>
-              </li>
-              <li>About</li>
-              <li>
+              </div>
+              <div>About</div>
+              <div>
                 <a href="/projects">Projects</a>
-              </li>
-              <li>Contact</li>
-            </ul>
-          </Nav>
+              </div>
+              <div>Contact</div>
+            </Nav>
+
+            <Contact>
+              <div>hd</div>
+              <div>hello2</div>
+            </Contact>
+          </SideBar>
           <ContentContainer>
             <Projects>
               <SkillsTitle>Work Projects</SkillsTitle>
@@ -164,7 +171,7 @@ export default class Home extends Component {
                     <WhenInView style={{ order: '1' }}>
                       {({ isInView }) => (
                         <RevealFromRight hide={!isInView}>
-                          <a href="https://campaigns.thehumaneleague.org/big-and-fresh/">
+                          <a href="http://campaigns-staging.thehumaneleague.com/big-and-fresh">
                             <img
                               src={BigAndFreshWebsiteImg}
                               style={{ width: '80%' }}

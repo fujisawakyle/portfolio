@@ -88,7 +88,7 @@ export const Wave = styled.div`
   }
 `;
 
-export const Nav = styled.div`
+export const SideBar = styled.div`
   position: sticky;
   height: 5em;
   top: 0;
@@ -100,23 +100,36 @@ export const Nav = styled.div`
   }
   display: none;
   ${media.sm`
-    display:block;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  margin-right: 20px;
   `};
+`;
+
+export const Nav = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content: center
+  align-items:center;
+  text-align:right;
+  padding-top: 10px;
+`;
+
+export const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  padding-bottom: 10px;
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`;
-
-export const Projects = styled.div`
-  img {
-    transition: all 1.5s ease-in-out;
-  }
-  img:hover {
-    transform: scale(1.1);
-  }
 `;
 
 export const SkillsContainer = styled.div`
@@ -143,12 +156,7 @@ export const Hero = styled.div`
   color: white;
   position: relative;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    #1983fb 82%,
-    #5092dc 109%,
-    #ffffff 341%
-  );
+  background: linear-gradient(to bottom, #1983fb, #fff);
   background: #1983fb;
 `;
 
