@@ -7,6 +7,7 @@ import {
   Nav,
   SideBar,
   Contact,
+  ContactIcon,
   Hero,
   Name,
   HeroImage,
@@ -21,7 +22,8 @@ import {
   Bubble3,
   Bubble4,
   Bubble5,
-  Fissure,
+  Sand,
+  Crab,
   Sun,
   Rays,
   Intro,
@@ -47,6 +49,11 @@ import CSSfile from '../../assets/graphics/CSSfile.svg';
 import reactLogo from '../../assets/graphics/reactLogo.svg';
 import middlemanLogo from '../../assets/graphics/middlemanLogo.svg';
 import jQueryLogo from '../../assets/graphics/jQueryLogo.svg';
+import githubIcon from '../../assets/graphics/Octocat.png';
+import linkedinIcon from '../../assets/graphics/linkedin.png';
+import emailIcon from '../../assets/graphics/email.svg';
+import CrabGraphic from '../../assets/graphics/crab.svg';
+import SandGraphic from '../../assets/graphics/sand.svg';
 
 import DardenWebsiteImg from '../../assets/images/projects/dardenWebsite.png';
 import BigAndFreshWebsiteImg from '../../assets/images/projects/bigandfreshWebiste.png';
@@ -135,8 +142,15 @@ export default class Home extends Component {
             </Nav>
 
             <Contact>
-              <div>hd</div>
-              <div>hello2</div>
+              <a href="mailto:fujisawakyle@gmail.com">
+                <ContactIcon src={emailIcon} />
+              </a>
+              <a href="https://github.com/fujisawakyle">
+                <ContactIcon src={githubIcon} />
+              </a>
+              <a href="https://linkedin.com/kylefujisawa">
+                <ContactIcon src={linkedinIcon} />
+              </a>
             </Contact>
           </SideBar>
           <ContentContainer>
@@ -186,6 +200,28 @@ export default class Home extends Component {
                       Built a new twitter and instagram feed for the custom CMS.
                     </ProjectDescriptionLeft>
                     <ProjectTitle>Social Feed</ProjectTitle>
+                  </ProjectInfoContainer>
+                </ProjectContainer>
+                <ProjectContainer>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <RevealFromLeft hide={!isInView}>
+                        <a href="https://dardenbrands.com">
+                          <img
+                            src={DardenWebsiteImg}
+                            style={{ width: '80%' }}
+                          />
+                        </a>
+                      </RevealFromLeft>
+                    )}
+                  </WhenInView>
+
+                  <ProjectInfoContainer>
+                    <ProjectTitle>Mailto Tracker</ProjectTitle>
+                    <ProjectDescriptionRight>
+                      Built an internal tool for tracking clicks on mailto
+                      links, since there wasn't a way to track them before.
+                    </ProjectDescriptionRight>
                   </ProjectInfoContainer>
                 </ProjectContainer>
               </WorkProjects>
@@ -346,7 +382,10 @@ export default class Home extends Component {
             </SkillsContainer>
           </ContentContainer>
         </Intro>
-        <Fissure src={FissureGraphic} />
+        <div style={{ position: 'relative' }}>
+          <Sand src={SandGraphic} />
+          <Crab src={CrabGraphic} />
+        </div>
       </HomeContainer>
     );
   }

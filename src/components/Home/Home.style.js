@@ -126,6 +126,11 @@ export const Contact = styled.div`
   padding-bottom: 10px;
 `;
 
+export const ContactIcon = styled.img`
+  width: 60%;
+  margin: 10px auto;
+`;
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -413,10 +418,13 @@ export const Bubble5 = styled.img`
   }
 `;
 
-export const Fissure = styled.img`
-  position: absolute:
-  bottom: 0;
-  width:100%;
+export const Sand = styled.img`width: 120%;`;
+
+export const Crab = styled.img`
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: calc(3em + 8vw);
 `;
 
 export const Footer = styled.div`
