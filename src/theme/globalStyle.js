@@ -9,4 +9,8 @@ injectGlobal`
     .panelmid {
         background: transparent;
       }
+
+    a {
+        text-decoration: none;
+    }
 `;
