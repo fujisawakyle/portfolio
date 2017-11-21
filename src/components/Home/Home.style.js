@@ -113,7 +113,8 @@ export const Nav = styled.div`
   flex-direction:column;
   justify-content: center
   align-items:center;
-  text-align:right;
+  text-align:center;
+  margin: 0 auto;
   padding-top: 10px;
 `;
 
