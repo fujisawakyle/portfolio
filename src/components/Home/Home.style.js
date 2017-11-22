@@ -93,18 +93,17 @@ export const SideBar = styled.div`
   height: 5em;
   top: 0;
   left: 0;
-  width: 20%;
+  width: 10%;
   z-index: 1;
   li {
     list-style: none;
   }
   display: none;
-  ${media.sm`
+  ${media.lg`
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  margin-right: 20px;
   `};
 `;
 
@@ -115,7 +114,9 @@ export const Nav = styled.div`
   align-items:center;
   text-align:center;
   margin: 0 auto;
-  padding-top: 10px;
+  border-right: 2px solid #44f544;
+  padding-right: 15px;
+  margin-top: 30px;
   a:hover {
     cursor: pointer;
   }
@@ -138,7 +139,7 @@ export const ContactIcon = styled.img`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
 `;
 
 export const SkillsContainer = styled.div`
@@ -254,6 +255,8 @@ export const Intro = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 export const IntroP = styled.p``;
@@ -280,7 +283,7 @@ export const SkillsItemContainer = styled.div`
   }
 `;
 export const SkillsItem = styled.div`
-  width: 30%;
+  width: 200px;
   background: rgba(96, 218, 251, 0.45);
   margin: 0.2em;
 `;
@@ -288,13 +291,14 @@ export const SkillsItem = styled.div`
 export const SkillsBoxIconContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 export const SkillsRectangle = styled.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;

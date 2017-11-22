@@ -35,17 +35,26 @@ export const ProjectContainer = styled.div`
 
 export const ProjectInfoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${media.lg`
+  ${media.sm`
+  display: flex;
+  flex-direction: row;
+  `} ${media.lg`
   display: flex;
   flex-direction: column;`};
 `;
 
 export const ProjectTitle = styled.div`
+  padding: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
   font-size: 1.5em;
+  ${media.sm`
   padding: 0 10px;
-  ${media.lg`
+  border-bottom: none;
+  `} ${media.lg`
   padding:0;
   padding-bottom: 10px;
   border-bottom: 2px solid #fff;
@@ -53,28 +62,40 @@ export const ProjectTitle = styled.div`
 `;
 
 export const ProjectDescription = styled.div`
+  padding-top: 10px;
   font-size: 1em;
-  ${media.lg`
+  ${media.sm`
+  padding-top:0;
+  `} ${media.lg`
   padding-top: 10px;
   order:1;
   `};
 `;
 
 export const ProjectDescriptionRight = styled(ProjectDescription)`
+  padding-left: 0;
+  border: none;
+  ${media.sm`
   padding-left: 10px;
   border-left: 2px solid #fff;
-  ${media.lg`
+  `} ${media.lg`
     padding-left: 0;
     border: none;
   `};
 `;
 
 export const ProjectDescriptionLeft = styled(ProjectDescription)`
-  padding-right: 10px;
-  border-right: 2px solid #fff;
-  ${media.lg`
   padding-right: 0;
   border: none;
+  order: 1;
+  ${media.sm`
+  padding-right: 10px;
+  border-right: 2px solid #fff;
+  order: 0;
+  `} ${media.lg`
+  padding-right: 0;
+  border: none;
+  order: 1;
 `};
 `;
 

@@ -361,8 +361,8 @@ export default class Home extends Component {
                 Libraries <br />
                 <br />
                 <SkillsBoxIconContainer>
-                  <img src={reactLogo} style={{ width: '25%' }} />
-                  <img src={middlemanLogo} style={{ width: '25%' }} />
+                  <img src={reactLogo} style={{ width: '22%' }} />
+                  <img src={middlemanLogo} style={{ width: '20%' }} />
                   <img src={jQueryLogo} style={{ width: '30%' }} />
                 </SkillsBoxIconContainer>
               </SkillsBox>
