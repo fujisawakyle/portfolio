@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import {
   DownArrow,
@@ -8,21 +7,14 @@ import {
   Contact,
   ContactIcon,
   Hero,
-  Name,
-  HeroImage,
-  HeroText,
   WelcomeText,
   Wave,
   Boat,
   HomeContainer,
-  Bubble,
   Sand,
   Crab,
-  Sun,
   Rays,
   Intro,
-  Footer,
-  IntroP,
   SkillsContainer,
   ContentContainer,
   IntroSlideIn,
@@ -35,9 +27,7 @@ import {
 } from './Home.style';
 
 import downArrow from '../../assets/graphics/arrow-down.svg';
-import FissureGraphic from '../../assets/graphics/fissure.svg';
 import BoatGraphic from '../../assets/graphics/Boat.svg';
-import BubbleGraphic from '../../assets/graphics/bubble.svg';
 import RaysGraphic from '../../assets/graphics/sunshine4u.svg';
 import JSfile from '../../assets/graphics/JSfile.svg';
 import HTMLfile from '../../assets/graphics/HTMLfile.svg';
@@ -67,34 +57,18 @@ import {
   ProjectTitle,
   ProjectDescriptionRight,
   ProjectDescriptionLeft,
-  ProjectImage,
   ImageRightContainer,
   WorkProjects,
   RevealFromLeft,
-  RevealFromRight,
-  Panels,
-  Panel,
-  ResumeApp,
-  WeatherApp,
-  CalculatorApp,
-  MediflectionApp
+  RevealFromRight
 } from '../Projects/Projects.style';
 import WhenInView from '../WhenInView/WhenInView';
-import classnames from 'classnames';
 import Scroll from 'react-scroll';
 import { scroller } from 'react-scroll';
-import img1 from '../../assets/images/projects/WeatherApp.png';
-import RedCloud from '../../assets/graphics/RedCloud.svg';
-import rightArrow from '../../assets/graphics/arrow-right.svg';
-import Boat3 from '../../assets/graphics/Boat.svg';
 
 let scroll = Scroll.animateScroll;
 
 export default class Home extends Component {
-  state = {
-    open: false
-  };
-
   scrollTo = element => {
     scroller.scrollTo(element, {
       duration: 800,
@@ -103,9 +77,6 @@ export default class Home extends Component {
     });
   };
   render() {
-    let showclasses = classnames('panel', 'panelmid', {
-      open: this.state.open
-    });
     return (
       <HomeContainer>
         <Hero>
@@ -163,6 +134,7 @@ export default class Home extends Component {
                           <a href="https://dardenbrands.com">
                             <img
                               src={DardenWebsiteImg}
+                              alt="Darden Website Preview"
                               style={{ width: '80%' }}
                             />
                           </a>
@@ -186,6 +158,7 @@ export default class Home extends Component {
                         <RevealFromRight hide={!isInView}>
                           <a href="http://campaigns-staging.thehumaneleague.com/big-and-fresh">
                             <img
+                              alt="Big and Fresh Website Preview"
                               src={BigAndFreshWebsiteImg}
                               style={{ width: '80%' }}
                             />
@@ -210,6 +183,7 @@ export default class Home extends Component {
                         <RevealFromLeft hide={!isInView}>
                           <a href="http://thehumaneleague.org/url-builder">
                             <img
+                              alt="Mailto Tracker Website Preview"
                               src={MailtoTrackerWebsiteImg}
                               style={{ width: '80%' }}
                             />
@@ -235,6 +209,7 @@ export default class Home extends Component {
                       <RevealFromLeft hide={!isInView}>
                         <a href="https://mediflection.herokuapp.com">
                           <img
+                            alt="Mediflection App Preview"
                             src={MediflectionAppImg}
                             style={{ width: '80%' }}
                           />
@@ -259,7 +234,11 @@ export default class Home extends Component {
                     {({ isInView }) => (
                       <RevealFromRight hide={!isInView}>
                         <a href="https://kyleresume-300a6.firebaseapp.com/">
-                          <img src={ResumeAppImg} style={{ width: '80%' }} />
+                          <img
+                            alt="Resume App Preview"
+                            src={ResumeAppImg}
+                            style={{ width: '80%' }}
+                          />
                         </a>
                       </RevealFromRight>
                     )}
@@ -278,7 +257,11 @@ export default class Home extends Component {
                     {({ isInView }) => (
                       <RevealFromLeft hide={!isInView}>
                         <a href="https://fujisawakyle.github.io/projects/weather/">
-                          <img src={WeatherAppImg} style={{ width: '80%' }} />
+                          <img
+                            alt="Resume App Preview"
+                            src={WeatherAppImg}
+                            style={{ width: '80%' }}
+                          />
                         </a>
                       </RevealFromLeft>
                     )}
@@ -300,6 +283,7 @@ export default class Home extends Component {
                       <RevealFromRight hide={!isInView}>
                         <a href="https://fujisawakyle.github.io/projects/calculator/">
                           <img
+                            alt="Calculator App Preview"
                             src={CalculatorAppImg}
                             style={{ width: '80%' }}
                           />
@@ -341,18 +325,42 @@ export default class Home extends Component {
                 Languages
                 <br /> <br />
                 <SkillsBoxIconContainer>
-                  <img src={JSfile} style={{ width: '26.6%' }} />
-                  <img src={HTMLfile} style={{ width: '26.6%' }} />
-                  <img src={CSSfile} style={{ width: '26.6%' }} />
+                  <img
+                    src={JSfile}
+                    alt="Javascript File Icon"
+                    style={{ width: '26.6%' }}
+                  />
+                  <img
+                    src={HTMLfile}
+                    alt="HTML File Icon"
+                    style={{ width: '26.6%' }}
+                  />
+                  <img
+                    src={CSSfile}
+                    alt="CSS File Icon"
+                    style={{ width: '26.6%' }}
+                  />
                 </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
                 Libraries <br />
                 <br />
                 <SkillsBoxIconContainer>
-                  <img src={reactLogo} style={{ width: '22%' }} />
-                  <img src={middlemanLogo} style={{ width: '20%' }} />
-                  <img src={jQueryLogo} style={{ width: '30%' }} />
+                  <img
+                    src={reactLogo}
+                    alt="React Logo"
+                    style={{ width: '22%' }}
+                  />
+                  <img
+                    src={middlemanLogo}
+                    alt="Middleman Logo"
+                    style={{ width: '20%' }}
+                  />
+                  <img
+                    src={jQueryLogo}
+                    alt="jQuery Logo"
+                    style={{ width: '30%' }}
+                  />
                 </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
@@ -385,12 +393,12 @@ export default class Home extends Component {
                   <SkillsItem>CSS Grid</SkillsItem>
                   <SkillsItem>Styled Components</SkillsItem>
                   <SkillsItem>TDD (Jest, Mocha)</SkillsItem>
+                  <SkillsItem>Web Accesibility</SkillsItem>
                 </SkillsItemContainer>
               </SkillsRectangle>
             </SkillsContainer>
           </ContentContainer>
         </Intro>
-        <Bubble src={BubbleGraphic} />
         <div style={{ position: 'relative' }}>
           <Sand src={SandGraphic} />
           <Crab src={CrabGraphic} />

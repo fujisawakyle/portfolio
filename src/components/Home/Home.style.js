@@ -129,11 +129,15 @@ export const Contact = styled.div`
   align-items: center;
   align-self: flex-end;
   padding-bottom: 10px;
+  img:hover {
+    opacity: 1;
+  }
 `;
 
 export const ContactIcon = styled.img`
   width: 60%;
   margin: 10px auto;
+  opacity: 0.8;
 `;
 
 export const ContentContainer = styled.div`
@@ -227,13 +231,6 @@ export const IntroSlideIn = styled.div`
   }
 `;
 
-// export const Boat2 = styled.img`
-//   width: calc(9.1em + 1.2vw);
-//   position: absolute;
-//   transform: rotateY(-180deg);
-//   animation: sail-left 15s infinite linear, wave 2s infinite ease;
-// `;
-
 export const DownArrow = styled.img`
   width: calc(1.1em + 1.2vw);
   position: absolute;
@@ -305,26 +302,6 @@ export const SkillsRectangle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-export const Bubble = styled.img`
-  width: 1em;
-  position: absolute;
-
-  animation: rise1 20s infinite ease-in;
-  @keyframes rise1 {
-    0% {
-      top: 98%;
-      left: 25%;
-    }
-    75% {
-      left: 18%;
-    }
-    100% {
-      top: 38vh;
-      left: 19%;
-    }
-  }
 `;
 
 export const Sand = styled.img`width: 100%;`;
