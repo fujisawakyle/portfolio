@@ -15,12 +15,7 @@ import {
   Wave,
   Boat,
   HomeContainer,
-  Bubble0,
-  Bubble1,
-  Bubble2,
-  Bubble3,
-  Bubble4,
-  Bubble5,
+  Bubble,
   Sand,
   Crab,
   Sun,
@@ -57,7 +52,8 @@ import CrabGraphic from '../../assets/graphics/crab.svg';
 import SandGraphic from '../../assets/graphics/sand.svg';
 
 import DardenWebsiteImg from '../../assets/images/projects/dardenWebsite.png';
-import BigAndFreshWebsiteImg from '../../assets/images/projects/bigandfreshWebiste.png';
+import BigAndFreshWebsiteImg from '../../assets/images/projects/bigandfreshWebsite.png';
+import MailtoTrackerWebsiteImg from '../../assets/images/projects/mailtoTrackerWebsite.png';
 import MediflectionAppImg from '../../assets/images/projects/MediflectionApp.png';
 import WeatherAppImg from '../../assets/images/projects/WeatherApp.png';
 import ResumeAppImg from '../../assets/images/projects/ResumeApp.png';
@@ -65,6 +61,7 @@ import CalculatorAppImg from '../../assets/images/projects/CalculatorApp.png';
 
 import {
   Projects,
+  ProjectImgContainer,
   ProjectInfoContainer,
   ProjectContainer,
   ProjectTitle,
@@ -126,18 +123,7 @@ export default class Home extends Component {
             focusing on increasing my React.js and CSS grid skills.
           </IntroSlideIn>
         </Hero>
-        {/* <Bubble0 src={BubbleGraphic} />
-        <Bubble1 src={BubbleGraphic} />
-        <Bubble2 src={BubbleGraphic} />
-        <Bubble3 src={BubbleGraphic} />
-        <Bubble4 src={BubbleGraphic} />
-        <Bubble5 src={BubbleGraphic} /> */}
-        {/* <HeroImage
-          src={require('../../assets/images/kyle.jpg')}
-          alt="Kyle hero image"
-          />
-          <br /> I'm <Name>Kyle</Name>
-           */}
+
         <Intro>
           <SideBar>
             <Nav>
@@ -149,10 +135,6 @@ export default class Home extends Component {
               </div>
               <div>
                 <a onClick={() => this.scrollTo('skills')}>Skills</a>
-              </div>
-              <div>
-                {' '}
-                <a onClick={() => this.scrollTo('contact')}>Contact</a>
               </div>
             </Nav>
 
@@ -174,19 +156,20 @@ export default class Home extends Component {
               <SkillsTitle>Work Projects</SkillsTitle>
               <WorkProjects>
                 <ProjectContainer>
-                  <WhenInView>
-                    {({ isInView }) => (
-                      <RevealFromLeft hide={!isInView}>
-                        <a href="https://dardenbrands.com">
-                          <img
-                            src={DardenWebsiteImg}
-                            style={{ width: '80%' }}
-                          />
-                        </a>
-                      </RevealFromLeft>
-                    )}
-                  </WhenInView>
-
+                  <ProjectImgContainer>
+                    <WhenInView>
+                      {({ isInView }) => (
+                        <RevealFromLeft hide={!isInView}>
+                          <a href="https://dardenbrands.com">
+                            <img
+                              src={DardenWebsiteImg}
+                              style={{ width: '80%' }}
+                            />
+                          </a>
+                        </RevealFromLeft>
+                      )}
+                    </WhenInView>
+                  </ProjectImgContainer>
                   <ProjectInfoContainer>
                     <ProjectTitle>Darden Cruelty</ProjectTitle>
                     <ProjectDescriptionRight>
@@ -211,6 +194,7 @@ export default class Home extends Component {
                       )}
                     </WhenInView>
                   </ImageRightContainer>
+
                   <ProjectInfoContainer>
                     <ProjectDescriptionLeft>
                       Built a new twitter and instagram feed for the
@@ -220,19 +204,20 @@ export default class Home extends Component {
                   </ProjectInfoContainer>
                 </ProjectContainer>
                 <ProjectContainer>
-                  <WhenInView>
-                    {({ isInView }) => (
-                      <RevealFromLeft hide={!isInView}>
-                        <a href="https://dardenbrands.com">
-                          <img
-                            src={DardenWebsiteImg}
-                            style={{ width: '80%' }}
-                          />
-                        </a>
-                      </RevealFromLeft>
-                    )}
-                  </WhenInView>
-
+                  <ProjectImgContainer>
+                    <WhenInView>
+                      {({ isInView }) => (
+                        <RevealFromLeft hide={!isInView}>
+                          <a href="http://thehumaneleague.org/url-builder">
+                            <img
+                              src={MailtoTrackerWebsiteImg}
+                              style={{ width: '80%' }}
+                            />
+                          </a>
+                        </RevealFromLeft>
+                      )}
+                    </WhenInView>
+                  </ProjectImgContainer>
                   <ProjectInfoContainer>
                     <ProjectTitle>Mailto Tracker</ProjectTitle>
                     <ProjectDescriptionRight>
@@ -244,18 +229,20 @@ export default class Home extends Component {
               </WorkProjects>
               <SkillsTitle>Personal Projects</SkillsTitle>
               <ProjectContainer>
-                <WhenInView>
-                  {({ isInView }) => (
-                    <RevealFromLeft hide={!isInView}>
-                      <a href="https://mediflection.herokuapp.com">
-                        <img
-                          src={MediflectionAppImg}
-                          style={{ width: '80%' }}
-                        />
-                      </a>
-                    </RevealFromLeft>
-                  )}
-                </WhenInView>
+                <ProjectImgContainer>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <RevealFromLeft hide={!isInView}>
+                        <a href="https://mediflection.herokuapp.com">
+                          <img
+                            src={MediflectionAppImg}
+                            style={{ width: '80%' }}
+                          />
+                        </a>
+                      </RevealFromLeft>
+                    )}
+                  </WhenInView>
+                </ProjectImgContainer>
                 <ProjectInfoContainer>
                   <ProjectTitle>Mediflection</ProjectTitle>
                   <ProjectDescriptionRight>
@@ -286,15 +273,17 @@ export default class Home extends Component {
                 </ProjectInfoContainer>
               </ProjectContainer>
               <ProjectContainer>
-                <WhenInView>
-                  {({ isInView }) => (
-                    <RevealFromLeft hide={!isInView}>
-                      <a href="https://fujisawakyle.github.io/projects/weather/">
-                        <img src={WeatherAppImg} style={{ width: '80%' }} />
-                      </a>
-                    </RevealFromLeft>
-                  )}
-                </WhenInView>
+                <ProjectImgContainer>
+                  <WhenInView>
+                    {({ isInView }) => (
+                      <RevealFromLeft hide={!isInView}>
+                        <a href="https://fujisawakyle.github.io/projects/weather/">
+                          <img src={WeatherAppImg} style={{ width: '80%' }} />
+                        </a>
+                      </RevealFromLeft>
+                    )}
+                  </WhenInView>
+                </ProjectImgContainer>
                 <ProjectInfoContainer>
                   <ProjectTitle>Local Weather</ProjectTitle>
                   <ProjectDescriptionRight>
@@ -399,10 +388,9 @@ export default class Home extends Component {
                 </SkillsItemContainer>
               </SkillsRectangle>
             </SkillsContainer>
-            <a name="contact" />
-            <SkillsTitle>Contact</SkillsTitle>
           </ContentContainer>
         </Intro>
+        <Bubble src={BubbleGraphic} />
         <div style={{ position: 'relative' }}>
           <Sand src={SandGraphic} />
           <Crab src={CrabGraphic} />

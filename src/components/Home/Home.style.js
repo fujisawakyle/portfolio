@@ -140,6 +140,7 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 85%;
+  z-index: 1;
 `;
 
 export const SkillsContainer = styled.div`
@@ -210,6 +211,7 @@ export const IntroSlideIn = styled.div`
   text-shadow: 0.7px 1.6px #000;
   z-index: 1;
   animation: slide-in 0.5s 2s forwards ease;
+  max-width: 1200px;
 
   @keyframes slide-in {
     0% {
@@ -305,38 +307,15 @@ export const SkillsRectangle = styled.div`
   align-items: center;
 `;
 
-export const Bubble0 = styled.img`
-  width: 0.7em;
-  position: absolute;
-  animation: rise0 5s infinite ease-in;
-
-  @keyframes rise0 {
-    0% {
-      top: 95%;
-      left: 15%;
-    }
-    25% {
-      left: 18%;
-    }
-    70% {
-      left: 17%;
-    }
-    100% {
-      top: 38vh;
-      left: 16%;
-    }
-  }
-`;
-
-export const Bubble1 = styled.img`
+export const Bubble = styled.img`
   width: 1em;
   position: absolute;
 
-  animation: rise1 4s infinite ease-in;
+  animation: rise1 20s infinite ease-in;
   @keyframes rise1 {
     0% {
-      top: 94%;
-      left: 22%;
+      top: 98%;
+      left: 25%;
     }
     75% {
       left: 18%;
@@ -347,92 +326,56 @@ export const Bubble1 = styled.img`
     }
   }
 `;
-export const Bubble2 = styled.img`
-  width: 1em;
-  position: absolute;
-
-  animation: rise2 6s infinite ease-in;
-  @keyframes rise2 {
-    0% {
-      top: 95%;
-      left: 29%;
-    }
-    50% {
-      left: 35%;
-    }
-
-    100% {
-      top: 38vh;
-      left: 55%;
-    }
-  }
-`;
-export const Bubble3 = styled.img`
-  width: 1em;
-  position: absolute;
-
-  animation: rise3 5s infinite ease-in;
-  @keyframes rise3 {
-    0% {
-      top: 95%;
-      left: 40%;
-    }
-    75% {
-      left: 43%;
-    }
-    100% {
-      top: 38vh;
-      left: 41%;
-    }
-  }
-`;
-export const Bubble4 = styled.img`
-  width: 0.7em;
-  position: absolute;
-
-  animation: rise4 9s infinite ease-in;
-  @keyframes rise4 {
-    0% {
-      top: 95%;
-      left: 65%;
-    }
-
-    75% {
-    }
-    100% {
-      top: 38vh;
-      left: 48%;
-    }
-  }
-`;
-
-export const Bubble5 = styled.img`
-  width: 1em;
-  position: absolute;
-
-  animation: rise5 6s infinite ease-in;
-  @keyframes rise5 {
-    0% {
-      top: 94%;
-      left: 98%;
-    }
-    65% {
-      left: 82%;
-    }
-    100% {
-      top: 38vh;
-      left: 80%;
-    }
-  }
-`;
 
 export const Sand = styled.img`width: 100%;`;
 
 export const Crab = styled.img`
   position: absolute;
-  top: 0;
-  left: 30%;
+  top: -30px;
+  left: 20%;
   width: calc(3em + 8vw);
+
+  animation: crawl 20s infinite linear, tobble 0.5s infinite linear;
+  @keyframes crawl {
+    0% {
+      left: 20%;
+      top: -30px;
+    }
+    10% {
+      left: 20%;
+      top: -30px;
+    }
+    35% {
+      left: 65%;
+    }
+    50% {
+      left: 50%;
+      top: -10px;
+    }
+
+    60% {
+      left: 82%;
+      top: -20px;
+    }
+    90% {
+      top: 15px;
+    }
+    100% {
+      left: 20%;
+      top: -30px;
+    }
+  }
+  @keyframes tobble {
+    0% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(-3deg);
+    }
+  }
 `;
 
 export const Footer = styled.div`

@@ -33,6 +33,12 @@ export const ProjectContainer = styled.div`
   `}
 `;
 
+export const ProjectImgContainer = styled.div`
+  ${media.lg`
+width: 65%;
+`};
+`;
+
 export const ProjectInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +49,8 @@ export const ProjectInfoContainer = styled.div`
   flex-direction: row;
   `} ${media.lg`
   display: flex;
-  flex-direction: column;`};
+  flex-direction: column;
+  width: 30%;`};
 `;
 
 export const ProjectTitle = styled.div`
@@ -109,6 +116,7 @@ export const ProjectImage = styled.img`
 export const ImageRightContainer = styled.div`
   ${media.lg`
     order: 1;
+    width:65%;
   `};
 `;
 
