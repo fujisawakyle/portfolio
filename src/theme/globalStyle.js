@@ -5,12 +5,15 @@ injectGlobal`
 
     body {
         font-family: 'Quicksand', sans-serif;
+        a, a:visited {
+            color: white;
+        }
+        a:hover {
+            color: #44f544;
+        }
     }
     .panelmid {
         background: transparent;
-      }
-
-    a {
-        text-decoration: none;
     }
+
 `;

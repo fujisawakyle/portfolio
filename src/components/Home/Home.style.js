@@ -116,6 +116,9 @@ export const Nav = styled.div`
   text-align:center;
   margin: 0 auto;
   padding-top: 10px;
+  a:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Contact = styled.div`
@@ -419,7 +422,7 @@ export const Bubble5 = styled.img`
   }
 `;
 
-export const Sand = styled.img`width: 120%;`;
+export const Sand = styled.img`width: 100%;`;
 
 export const Crab = styled.img`
   position: absolute;

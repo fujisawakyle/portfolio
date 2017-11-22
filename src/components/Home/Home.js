@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import downArrow from '../../assets/graphics/arrow-down.svg';
-import FissureGraphic from '../../assets/graphics/fissure.svg';
+
 import {
   DownArrow,
   Nav,
@@ -40,6 +39,8 @@ import {
   SkillsItem
 } from './Home.style';
 
+import downArrow from '../../assets/graphics/arrow-down.svg';
+import FissureGraphic from '../../assets/graphics/fissure.svg';
 import BoatGraphic from '../../assets/graphics/Boat.svg';
 import BubbleGraphic from '../../assets/graphics/bubble.svg';
 import RaysGraphic from '../../assets/graphics/sunshine4u.svg';
@@ -83,17 +84,26 @@ import {
 } from '../Projects/Projects.style';
 import WhenInView from '../WhenInView/WhenInView';
 import classnames from 'classnames';
+import Scroll from 'react-scroll';
+import { scroller } from 'react-scroll';
 import img1 from '../../assets/images/projects/WeatherApp.png';
 import RedCloud from '../../assets/graphics/RedCloud.svg';
 import rightArrow from '../../assets/graphics/arrow-right.svg';
 import Boat3 from '../../assets/graphics/Boat.svg';
 
+let scroll = Scroll.animateScroll;
+
 export default class Home extends Component {
   state = {
     open: false
   };
-  revealProject = () => {
-    alert('yah');
+
+  scrollTo = element => {
+    scroller.scrollTo(element, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    });
   };
   render() {
     let showclasses = classnames('panel', 'panelmid', {
@@ -132,13 +142,18 @@ export default class Home extends Component {
           <SideBar>
             <Nav>
               <div>
-                <a href="/">Home</a>
+                <a onClick={() => scroll.scrollToTop()}>About</a>
               </div>
-              <div>About</div>
               <div>
-                <a href="/projects">Projects</a>
+                <a onClick={() => this.scrollTo('projects')}>Projects</a>
               </div>
-              <div>Contact</div>
+              <div>
+                <a onClick={() => this.scrollTo('skills')}>Skills</a>
+              </div>
+              <div>
+                {' '}
+                <a onClick={() => this.scrollTo('contact')}>Contact</a>
+              </div>
             </Nav>
 
             <Contact>
@@ -154,6 +169,7 @@ export default class Home extends Component {
             </Contact>
           </SideBar>
           <ContentContainer>
+            <a name="projects" />
             <Projects>
               <SkillsTitle>Work Projects</SkillsTitle>
               <WorkProjects>
@@ -174,9 +190,9 @@ export default class Home extends Component {
                   <ProjectInfoContainer>
                     <ProjectTitle>Darden Cruelty</ProjectTitle>
                     <ProjectDescriptionRight>
-                      Created this site based on the mockup provided by the team
-                      designer. Worked with the Twitter API to build a custom
-                      tweet display.
+                      Created this Ruby on Rails site based on the mockup
+                      provided by the team designer. Worked with the Twitter API
+                      to build a custom tweet display.
                     </ProjectDescriptionRight>
                   </ProjectInfoContainer>
                 </ProjectContainer>
@@ -197,7 +213,8 @@ export default class Home extends Component {
                   </ImageRightContainer>
                   <ProjectInfoContainer>
                     <ProjectDescriptionLeft>
-                      Built a new twitter and instagram feed for the custom CMS.
+                      Built a new twitter and instagram feed for the
+                      organization's custom CMS.
                     </ProjectDescriptionLeft>
                     <ProjectTitle>Social Feed</ProjectTitle>
                   </ProjectInfoContainer>
@@ -242,9 +259,10 @@ export default class Home extends Component {
                 <ProjectInfoContainer>
                   <ProjectTitle>Mediflection</ProjectTitle>
                   <ProjectDescriptionRight>
-                    Built using MERN stack app (Redux) with Google Oauth sign
-                    in. Custom UI/UX design using third party calendar and graph
-                    libraries.
+                    Built this meditation and reflection tracker using the MERN
+                    stack + Redux with Google Oauth sign in. Designed the UI/UX
+                    and used third party libraries for the calendar and graph
+                    components.
                   </ProjectDescriptionRight>
                 </ProjectInfoContainer>
               </ProjectContainer>
@@ -327,6 +345,7 @@ export default class Home extends Component {
                 </MediflectionApp>
               </a> */}
 
+            <a name="skills" />
             <SkillsTitle>Skills</SkillsTitle>
             <SkillsContainer>
               <SkillsBox>
@@ -380,6 +399,8 @@ export default class Home extends Component {
                 </SkillsItemContainer>
               </SkillsRectangle>
             </SkillsContainer>
+            <a name="contact" />
+            <SkillsTitle>Contact</SkillsTitle>
           </ContentContainer>
         </Intro>
         <div style={{ position: 'relative' }}>
