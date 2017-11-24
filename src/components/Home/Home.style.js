@@ -171,7 +171,6 @@ export const Hero = styled.div`
   color: white;
   position: relative;
   height: 100vh;
-  background: linear-gradient(to bottom, #1983fb, #fff);
   background: #1983fb;
 `;
 
@@ -304,7 +303,9 @@ export const SkillsRectangle = styled.div`
   align-items: center;
 `;
 
-export const Sand = styled.img`width: 100%;`;
+export const Sand = styled.img`
+  width: 100%;
+`;
 
 export const Crab = styled.img`
   position: absolute;

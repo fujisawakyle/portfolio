@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Data from '../../data/Data.json';
+
 import {
   DownArrow,
   Nav,
@@ -85,13 +87,13 @@ export default class Home extends Component {
           <Boat src={BoatGraphic} alt="boat sailing to right" />
           {/* <Boat2 src={BoatGraphic} alt="Boat" /> */}
           <DownArrow src={downArrow} alt="down arrow" />
-          <WelcomeText>Hello there!</WelcomeText>
+          <WelcomeText>{Data.about.header}</WelcomeText>
           <IntroSlideIn>
             I'm a design-oriented developer currently interning as a Web
-            Developer at{' '}
-            <a href="https://www.thehumaneleague.com">The Humane League</a>. I
+            Developer with{' '}
+            <a href="https://www.thehumaneleague.org">The Humane League</a>. I
             love to build mobile-first websites and apps from scratch and am
-            focusing on increasing my React.js and CSS grid skills.
+            focusing on increasing my React and CSS grid skills.
           </IntroSlideIn>
         </Hero>
 
@@ -143,11 +145,9 @@ export default class Home extends Component {
                     </WhenInView>
                   </ProjectImgContainer>
                   <ProjectInfoContainer>
-                    <ProjectTitle>Darden Cruelty</ProjectTitle>
+                    <ProjectTitle>{Data.projects.darden.title}</ProjectTitle>
                     <ProjectDescriptionRight>
-                      Created this Ruby on Rails site based on the mockup
-                      provided by the team designer. Worked with the Twitter API
-                      to build a custom tweet display.
+                      {Data.projects.darden.description}
                     </ProjectDescriptionRight>
                   </ProjectInfoContainer>
                 </ProjectContainer>
@@ -170,10 +170,9 @@ export default class Home extends Component {
 
                   <ProjectInfoContainer>
                     <ProjectDescriptionLeft>
-                      Built a new twitter and instagram feed for the
-                      organization's custom CMS.
+                      {Data.projects.feed.description}
                     </ProjectDescriptionLeft>
-                    <ProjectTitle>Social Feed</ProjectTitle>
+                    <ProjectTitle>{Data.projects.feed.title}</ProjectTitle>
                   </ProjectInfoContainer>
                 </ProjectContainer>
                 <ProjectContainer>
@@ -193,10 +192,9 @@ export default class Home extends Component {
                     </WhenInView>
                   </ProjectImgContainer>
                   <ProjectInfoContainer>
-                    <ProjectTitle>Mailto Tracker</ProjectTitle>
+                    <ProjectTitle>{Data.projects.tracker.title}</ProjectTitle>
                     <ProjectDescriptionRight>
-                      Built an internal tool for tracking clicks on mailto
-                      links, since there wasn't a way to track them before.
+                      {Data.projects.tracker.description}
                     </ProjectDescriptionRight>
                   </ProjectInfoContainer>
                 </ProjectContainer>
@@ -219,12 +217,11 @@ export default class Home extends Component {
                   </WhenInView>
                 </ProjectImgContainer>
                 <ProjectInfoContainer>
-                  <ProjectTitle>Mediflection</ProjectTitle>
+                  <ProjectTitle>
+                    {Data.projects.mediflection.title}
+                  </ProjectTitle>
                   <ProjectDescriptionRight>
-                    Built this meditation and reflection tracker using the MERN
-                    stack + Redux with Google Oauth sign in. Designed the UI/UX
-                    and used third party libraries for the calendar and graph
-                    components.
+                    {Data.projects.mediflection.description}
                   </ProjectDescriptionRight>
                 </ProjectInfoContainer>
               </ProjectContainer>
@@ -246,9 +243,9 @@ export default class Home extends Component {
                 </ImageRightContainer>
                 <ProjectInfoContainer>
                   <ProjectDescriptionLeft>
-                    My first React.js and firebasehosting app.
+                    {Data.projects.resume.description}
                   </ProjectDescriptionLeft>
-                  <ProjectTitle>Online Resume</ProjectTitle>
+                  <ProjectTitle>{Data.projects.resume.title}</ProjectTitle>
                 </ProjectInfoContainer>
               </ProjectContainer>
               <ProjectContainer>
@@ -268,10 +265,9 @@ export default class Home extends Component {
                   </WhenInView>
                 </ProjectImgContainer>
                 <ProjectInfoContainer>
-                  <ProjectTitle>Local Weather</ProjectTitle>
+                  <ProjectTitle>{Data.projects.weather.title}</ProjectTitle>
                   <ProjectDescriptionRight>
-                    Used openweathermap API to gather local weather. Custom UI
-                    design.
+                    {Data.projects.weather.description}
                   </ProjectDescriptionRight>
                 </ProjectInfoContainer>
               </ProjectContainer>
@@ -294,9 +290,9 @@ export default class Home extends Component {
                 </ImageRightContainer>
                 <ProjectInfoContainer>
                   <ProjectDescriptionLeft>
-                    Custom UI and functional calculator
+                    {Data.projects.calculator.description}
                   </ProjectDescriptionLeft>
-                  <ProjectTitle>Calculator</ProjectTitle>
+                  <ProjectTitle>{Data.projects.weather.title}</ProjectTitle>
                 </ProjectInfoContainer>
               </ProjectContainer>
             </Projects>
@@ -364,7 +360,7 @@ export default class Home extends Component {
                 </SkillsBoxIconContainer>
               </SkillsBox>
               <SkillsBox>
-                Development<br />
+                Workflow<br />
                 <SkillsItemContainer>
                   <SkillsItem>Responsive Design</SkillsItem>
                   <SkillsItem>Git + Github</SkillsItem>
@@ -376,7 +372,7 @@ export default class Home extends Component {
                 </SkillsItemContainer>
               </SkillsBox>
               <SkillsBox>
-                Knowledge of: <br />
+                Knowledge of <br />
                 <SkillsItemContainer>
                   <SkillsItem>RESTful API</SkillsItem>
                   <SkillsItem>Wordpress</SkillsItem>
@@ -388,7 +384,7 @@ export default class Home extends Component {
                 </SkillsItemContainer>
               </SkillsBox>
               <SkillsRectangle>
-                Currently learning: <br />
+                Currently learning <br />
                 <SkillsItemContainer>
                   <SkillsItem>CSS Grid</SkillsItem>
                   <SkillsItem>Styled Components</SkillsItem>

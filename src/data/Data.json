@@ -1,0 +1,59 @@
+{
+  "test": {
+    "hi": "ho",
+    "there": 2
+  },
+  "about": {
+    "header": "Hello there!"
+  },
+  "projects": {
+    "darden": {
+      "title": "Darden Cruelty",
+      "description":
+        "Built this Ruby on Rails site based on the mockup provided by the team designer. Worked with the Twitter API to build a custom tweet display."
+    },
+    "feed": {
+      "title": "Social Feed",
+      "description":
+        "Built a new twitter and instagram feed for the organization's custom CMS."
+    },
+    "tracker": {
+      "title": "Mailto Tracker",
+      "description":
+        "Built an internal tool for tracking clicks on mailto links, since there wasn't a way to track them before."
+    },
+    "mediflection": {
+      "title": "Mediflection",
+      "description":
+        "Built this meditation and reflection tracker using the MERN stack + Redux with Google Oauth sign in. Designed the UI/UX and used third party libraries for the calendar and graph components."
+    },
+    "resume": {
+      "title": "Online Resume",
+      "description": "My first React.js and firebasehosting app."
+    },
+    "weather": {
+      "title": "Local Weather",
+      "description":
+        "Used openweathermap API to gather local weather. Custom UI design."
+    },
+    "calculator": {
+      "title": "Calculator",
+      "description": "Custom UI and functional calculator."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "first": {
+      "image": "../../assets/images/adventure1.jpg",
+      "title": "Follow me on my journey",
+      "body":
+        "With this blog, I aspire to help others whom are also on the web development journey. I’m not very far long, but I still have much to share! Join me as I discover new learning languages, frameworks, coding podcasts/meet-ups, and much more! Stay tuned! :)"
+    },
+    "second": {
+      "image": "../../assets/images/adventure1.jpg",
+      "title": "Follow me on my journey",
+      "body":
+        "With this blog, I aspire to help others whom are also on the web development journey. I’m not very far long, but I still have much to share! Join me as I discover new learning languages, frameworks, coding podcasts/meet-ups, and much more! Stay tuned! :)"
+    }
+  }
+}
