@@ -22,10 +22,12 @@ import {
   IntroSlideIn,
   SkillsBox,
   SkillsRectangle,
-  SkillsTitle,
+  SectionTitle,
   SkillsBoxIconContainer,
   SkillsItemContainer,
-  SkillsItem
+  SkillsItem,
+  ContactContainer,
+  ContactIconContainer
 } from './Home.style';
 
 import downArrow from '../../assets/graphics/arrow-down.svg';
@@ -126,7 +128,7 @@ export default class Home extends Component {
           <ContentContainer>
             <a name="projects" />
             <Projects>
-              <SkillsTitle>Work Projects</SkillsTitle>
+              <SectionTitle>Work Projects</SectionTitle>
               <WorkProjects>
                 <ProjectContainer>
                   <ProjectImgContainer>
@@ -199,7 +201,7 @@ export default class Home extends Component {
                   </ProjectInfoContainer>
                 </ProjectContainer>
               </WorkProjects>
-              <SkillsTitle>Personal Projects</SkillsTitle>
+              <SectionTitle>Personal Projects</SectionTitle>
               <ProjectContainer>
                 <ProjectImgContainer>
                   <WhenInView>
@@ -315,7 +317,7 @@ export default class Home extends Component {
               </a> */}
 
             <a name="skills" />
-            <SkillsTitle>Skills</SkillsTitle>
+            <SectionTitle>Skills</SectionTitle>
             <SkillsContainer>
               <SkillsBox>
                 Languages
@@ -381,6 +383,7 @@ export default class Home extends Component {
                   <SkillsItem>express</SkillsItem>
                   <SkillsItem>mongoDB</SkillsItem>
                   <SkillsItem>Oauth</SkillsItem>
+                  <SkillsItem>Sketch 3</SkillsItem>
                 </SkillsItemContainer>
               </SkillsBox>
               <SkillsRectangle>
@@ -393,6 +396,22 @@ export default class Home extends Component {
                 </SkillsItemContainer>
               </SkillsRectangle>
             </SkillsContainer>
+            <ContactContainer>
+              <SectionTitle>Contact</SectionTitle>
+              <ContactIconContainer>
+                <a href="mailto:fujisawakyle@gmail.com">
+                  <img src={emailIcon} />
+                </a>
+
+                <a href="https://github.com/fujisawakyle">
+                  <img src={githubIcon} />
+                </a>
+
+                <a href="https://linkedin.com/kylefujisawa">
+                  <img src={linkedinIcon} />
+                </a>
+              </ContactIconContainer>
+            </ContactContainer>
           </ContentContainer>
         </Intro>
         <div style={{ position: 'relative' }}>

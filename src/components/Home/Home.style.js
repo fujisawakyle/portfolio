@@ -144,22 +144,24 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 85%;
-  z-index: 1;
 `;
 
 export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  z-index: 1;
+
   ${media.sm`
   flex-direction: row;
   flex-wrap: wrap;
 `};
+  ${media.lg`
+  margin-bottom: 2em;
+  `};
 `;
 
-export const SkillsTitle = styled.h1`
+export const SectionTitle = styled.h1`
   border-bottom: 2px solid #44f544;
   margin-left: 0.5em;
   padding-bottom: 0.5em;
@@ -273,7 +275,7 @@ export const SkillsItemContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   > * {
     width: 30%;
@@ -303,8 +305,29 @@ export const SkillsRectangle = styled.div`
   align-items: center;
 `;
 
+export const ContactContainer = styled.div`
+  display: block;
+  ${media.lg`
+    display:none;
+  `};
+`;
+
+export const ContactIconContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2em;
+  img {
+    width: 4em;
+  }
+  img:hover {
+    padding: 2px;
+  }
+`;
+
 export const Sand = styled.img`
   width: 100%;
+  margin-bottom: -10px;
 `;
 
 export const Crab = styled.img`

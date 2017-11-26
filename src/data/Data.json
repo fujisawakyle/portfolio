@@ -15,12 +15,12 @@
     "feed": {
       "title": "Social Feed",
       "description":
-        "Built a new twitter and instagram feed for the organization's custom CMS."
+        "Built a new twitter and instagram feed feature for the organization's custom CMS."
     },
     "tracker": {
       "title": "Mailto Tracker",
       "description":
-        "Built an internal tool for tracking clicks on mailto links, since there wasn't a way to track them before."
+        "Built an internal tool to track clicks on mailto links with Google Analytics."
     },
     "mediflection": {
       "title": "Mediflection",
@@ -29,16 +29,18 @@
     },
     "resume": {
       "title": "Online Resume",
-      "description": "My first React.js and firebasehosting app."
+      "description":
+        "Build this online resume using React, Firebase, and Bulma Flexbox."
     },
     "weather": {
       "title": "Local Weather",
       "description":
-        "Used openweathermap API to gather local weather. Custom UI design."
+        "Built this to gather local weather informatino from the openweathermap API and designed the UI."
     },
     "calculator": {
       "title": "Calculator",
-      "description": "Custom UI and functional calculator."
+      "description":
+        "Built the logic for this functional calculator and designed the UI."
     }
   },
   "blog": {
