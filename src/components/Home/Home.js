@@ -294,7 +294,7 @@ export default class Home extends Component {
                   <ProjectDescriptionLeft>
                     {Data.projects.calculator.description}
                   </ProjectDescriptionLeft>
-                  <ProjectTitle>{Data.projects.weather.title}</ProjectTitle>
+                  <ProjectTitle>{Data.projects.calculator.title}</ProjectTitle>
                 </ProjectInfoContainer>
               </ProjectContainer>
             </Projects>
