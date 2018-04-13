@@ -91,10 +91,10 @@ export default class Home extends Component {
           <DownArrow src={downArrow} alt="down arrow" />
           <WelcomeText>{Data.about.header}</WelcomeText>
           <IntroSlideIn>
-            I'm a design-oriented developer currently with{' '}
-            <a href="https://www.thehumaneleague.org">The Humane League</a> as a
-            Web Developer. I love to build mobile-first websites and apps from
-            scratch and am focusing on increasing my React and CSS grid skills.
+            I'm a design-oriented developer at{' '}
+            <a href="https://www.thehumaneleague.org">The Humane League</a>. I
+            love to build mobile-first websites and apps from scratch and am
+            focusing on increasing my React and CSS grid skills.
           </IntroSlideIn>
         </Hero>
 
